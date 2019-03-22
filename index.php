@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
-
 <body class="bg-light">
 
 <?php require_once 'menu.php'; ?>	

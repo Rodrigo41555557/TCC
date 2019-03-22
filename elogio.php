@@ -15,9 +15,10 @@
 
 	<form action=""  method="POST" name="formulario" > 
 	<br>
+
 	<div class="form-group">
         <div class="col-md-6 offset-md-3">
-	<h3 class="text-center"> Mande seu Elogio </h3>
+	        <h3 class="text-center"> Mande seu Elogio </h3>
 	    </div>
     </div>
 
@@ -68,6 +69,7 @@
                 </div>
             </div>
         </div>
+
     </form> 
 	
 	</div>
