@@ -5,7 +5,6 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">					
-
 			
 			<?php	//isset - verifica se uma variável está definida
 				if (!isset($_SESSION['Usuario'])) {// se não for o bruno	
@@ -35,10 +34,10 @@
 							<a class="nav-link text-light" href="index.php" >Início</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-light" href="resenhas.php" >Entrar</a>
+							<a class="nav-link text-light" href="login.php" >Entrar</a>
 						</li>
 				    	<li class="nav-item" >
-				    	    <a class="nav-link text-light" href="ranking.php" >Cadastro</a>
+				    	    <a class="nav-link text-light" href="cadastro.php" >Cadastro</a>
 				    	</li>
 				    	<li class="nav-item" >
 				    	    <a class="nav-link text-light" href="busca.php" >Suporte</a>
@@ -56,7 +55,6 @@
 			</div>
 		</nav>
 
-		
 		<hr class="bg-light">
 		<div class="container bg-primary">
 			<h1 class="text-center  text-light">Sistema de ouvidorias do Lorem Ipsum</h1>
