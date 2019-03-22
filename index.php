@@ -1,13 +1,7 @@
-<?php
-$json = file_get_contents('resenhas.json');
-//echo $lista_resenhasjson;
-$lista_resenhas = json_decode($json, TRUE);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Resenhados Online</title>
+    <title>Sistema de ouvidoria do lorem ipsum</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -26,7 +20,7 @@ $lista_resenhas = json_decode($json, TRUE);
             
             <div id="resenha" class="col-sm-4 mb-5">
                 <div  class="card">
-                    <img class="card-img" src="img/x.jpg" height="150px" >
+                    <a href="elogio.php"><img class="card-img" src="img/x.jpg" height="150px"></a>
                 </div>
             </div>
 
