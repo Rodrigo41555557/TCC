@@ -45,6 +45,13 @@
                 <label> Confirmar senha </label>  
                 <input type="password" name="senha" class="form-control" placeholder="Confirmar senha" required="" >
             </div>
+        </div>
+    <br>
+        <div class="form-group">
+            <div class="col-md-6 offset-md-3">
+                <input type="submit" value="Criar Conta" class="btn btn-dark" name="">
+            </div>
+        </div>
 
 	</form>
 </div>

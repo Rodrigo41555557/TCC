@@ -64,10 +64,6 @@
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <input type="submit" value="Enviar Elogio" class="btn btn-primary" name="">
-                
-                <div class="form-check">
-                    <label > <input class="form-check-input" type="checkbox" value="" > Lembre-me  </label> 
-                </div>
             </div>
         </div>
 

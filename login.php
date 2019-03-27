@@ -46,7 +46,7 @@
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
-                <a href="login/cadastro.php">Criar um Cadastro</a>
+                <a href="cadastro.php">Criar um Cadastro</a>
             </div>
         </div>
 		
