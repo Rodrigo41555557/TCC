@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sistema de ouvidoria do lorem ipsum</title>
-    <meta charset="utf-8">
+	<title>Sistema de ouvidoria do lorem ipsum</title>
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body class="bg-light">
 
-<?php require_once 'menu.php'; ?>	
-
+<?php require_once 'menu.php'; ?>
+	
 	<div class="container bg-light"> 
 
 	<form action=""  method="POST" name="formulario" > 
@@ -19,7 +19,7 @@
 
 	<div class="form-group">
         <div class="col-md-6 offset-md-3">
-	        <h3 class="text-center"> Mande sua Sugestão </h3>
+	        <h3 class="text-center"> Mande sua Reclamação </h3>
 	    </div>
     </div>
 
@@ -35,7 +35,14 @@
                 <label> Telefone </label>  
                 <input type="text" name="telefone" class="form-control" placeholder="Telefone" required="" >
             </div>
-        </div>       
+        </div>      
+
+        <div class="form-group">
+            <div class="col-md-6 offset-md-3">
+                <label> Assunto/Título </label>  
+                <input type="text" name="titulo" class="form-control" placeholder="Assunto/Título" required="" >
+            </div>
+        </div>   
 		
 		<div class="form-group">
             <div class="col-md-6 offset-md-3">
@@ -46,16 +53,9 @@
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
-                <label> Assunto/Título </label>  
-                <input type="text" name="titulo" class="form-control" placeholder="Assunto/Título" required="" >
-            </div>
-        </div>  
-
-        <div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <label> Escreva sua sugestão </label>  
+                <label> Escreva sua reclamação de forma publica </label>  
                 <div>
-                <textarea class="form-control" rows="5"  placeholder="Escreva sua sugestão"></textarea>
+                <textarea class="form-control" rows="5"></textarea>
             </div>
         </div> 
 
@@ -70,6 +70,5 @@
     </form> 
 	
 	</div>
-	
 </body>
 </html>
