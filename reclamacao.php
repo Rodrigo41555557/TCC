@@ -11,7 +11,7 @@
 
 <?php require_once 'menu.php'; ?>
 	
-	<div class="container bg-light"> 
+<div class="container bg-light"> 
 
 	<form action=""  method="POST" name="formulario" > 
         
@@ -69,6 +69,6 @@
 
     </form> 
 	
-	</div>
+</div>
 </body>
 </html>
