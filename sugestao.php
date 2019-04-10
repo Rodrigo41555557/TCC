@@ -11,7 +11,7 @@
 
 <?php require_once 'menu.php'; ?>	
 
-	<div class="container bg-light"> 
+<div class="container bg-light"> 
 
 	<form action=""  method="POST" name="formulario" > 
         
@@ -58,9 +58,7 @@
                 <textarea class="form-control" rows="5"  placeholder="Escreva sua sugestão"></textarea>
             </div>
         </div> 
-
         <br>
-
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <input type="submit" value="Enviar" class="btn btn-primary" name="">
@@ -69,7 +67,7 @@
 
     </form> 
 	
-	</div>
+</div>
 	
 </body>
 </html>

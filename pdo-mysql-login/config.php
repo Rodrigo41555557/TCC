@@ -3,8 +3,8 @@
 
 	// Definições da base de dados
 	define('dbhost', 'localhost');
-	define('dbuser', 'root');
-	define('dbpass', '1234567890');
+	define('dbuser', 'aluno');
+	define('dbpass', 'aluno');
 	define('dbname', 'login');
 
 	// Conectando a base de dados (MySQL)
