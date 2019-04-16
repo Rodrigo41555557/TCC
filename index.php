@@ -19,7 +19,7 @@
             
             <div id="resenha" class="col-sm-4 mb-5">
                 <div  class="card">
-                    <a href="elogio.php"><img class="card-img" src="img/x.jpg" height="150px"></a>
+                    <a href="elogio.php"><img class="card-img" src="img/elogio.jpg" height="150px"></a>
                 </div>
             </div>
 
