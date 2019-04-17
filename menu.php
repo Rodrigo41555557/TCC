@@ -1,31 +1,13 @@
+<?php 
+	require 'config.php';
+?>
 <div class="bg-primary z-depth-5" id="cabecalho">	
 
 	<nav class="navbar navbar-expand-lg navbar-primary bg-bg-primary" >
 		<a href="index.php"><img src="img/x.jpg" width="30" height="30" alt=""></a>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">					
-			
-			<?php	//isset - verifica se uma variável está definida
-				if (!isset($_SESSION['Usuario'])) {// se não for o bruno	
-			?>
-				<!-- form de login -->
-				<li class="nav-item" >
-                 	<a class="nav-link" href="login.php" ></a>
-                </li>
-                <li class="nav-item" >
-                    <a class="nav-link" href="cadastro.php" ></a>
-                </li>
-
-			<?php
-			}else{
-			?>
-
-				<!--PERFIL-->
-			<p>Você está logado!, <?= $_SESSION['Usuario'] ?>!</p>
-				<a href="logout.php">Sair</a>
-			<?php	}	?>
-			
+			<ul class="navbar-nav mr-auto">						
 			</ul>
 
 				<form method="post" action="busca.php" class="form-inline my-2 my-lg-0">
@@ -33,12 +15,36 @@
 						<li class="nav-item">
 							<a class="nav-link text-light" href="index.php" >Início</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link text-light" href="login.php" >Entrar</a>
-						</li>
-				    	<li class="nav-item" >
-				    	    <a class="nav-link text-light" href="cadastro.php" >Cadastro</a>
-				    	</li>
+						<?php
+							//isset - verifica se uma variável está definida
+						    echo "<br><br><br><br><br><br><br><br>TESTE.... $_SESSION['login']";
+
+							if (isset($_SESSION['login']) and $_SESSION['password'] == $_POST['password']) {// se não for o bruno	
+						?>
+							<!--PERFIL-->
+							<li class="nav-item" >
+								<p>Você está logado!, <?=  $_SESSION['fullname']; ?>!</p>
+							</li>
+							<li class="nav-item" >
+								<a href="logout.php">Sair</a>
+							</li>
+
+							
+	
+						<?php
+							}else{
+						?>
+							<!-- form de login -->
+							<li class="nav-item" >
+			                 	<a class="nav-link text-light" href="login.php" >Entrar</a>
+			                </li>
+			                <li class="nav-item" >
+			                    <a class="nav-link text-light" href="cadastro.php" >Cadastro</a>
+			                </li>
+				
+						<?php	
+							}	
+						?>
 				    	<li class="nav-item" >
 				    	    <a class="nav-link text-light" href="busca.php" >Suporte</a>
 				    	</li>
