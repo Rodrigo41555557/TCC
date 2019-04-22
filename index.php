@@ -9,7 +9,7 @@
 </head>
 <body class="bg-light">
 
-<?php require_once 'menu.php'; ?>	
+<?php include 'menu.php'; ?>	
 
 <br><br><br>
 

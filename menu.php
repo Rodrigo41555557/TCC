@@ -17,7 +17,7 @@
 						</li>
 						<?php
 							//isset - verifica se uma variável está definida
-						    echo "<br><br><br><br><br><br><br><br>TESTE.... $_SESSION['login']";
+						    
 
 							if (isset($_SESSION['login']) and $_SESSION['password'] == $_POST['password']) {// se não for o bruno	
 						?>
