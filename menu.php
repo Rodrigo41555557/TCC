@@ -44,7 +44,7 @@
 							}	
 						?>
 				    	<li class="nav-item" >
-				    	    <a class="nav-link text-light" href="busca.php" >Suporte</a>
+				    	    <a class="nav-link text-light" href="suporte.php" >Suporte</a>
 				    	</li>
 				    	<li class="nav-item" >
 				    	    <a class="nav-link text-light" href="sobrenos.php" ></a>
@@ -61,7 +61,7 @@
 
 		<hr class="bg-light">
 		<div class="container bg-primary">
-			<h1 class="text-center  text-light">Sistema de ouvidorias do Lorem Ipsum</h1>
+			<h1 class="text-center  text-light">Ouvindo Você!</h1>
 		</div>
 		<br>
 </div>
