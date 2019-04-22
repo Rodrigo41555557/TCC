@@ -29,8 +29,6 @@
 								<a href="logout.php">Sair</a>
 							</li>
 
-							
-	
 						<?php
 							}else{
 						?>
