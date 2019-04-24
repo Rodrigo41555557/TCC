@@ -29,14 +29,7 @@
                 <input type="text" name="nome" class="form-control" placeholder="Nome" required="" >    
             </div>
         </div>
-
-        <div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <label> Telefone (Opcional) </label>  
-                <input type="text" name="telefone" class="form-control" placeholder="Telefone" required="" >
-            </div>
-        </div>      
-
+        
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Assunto/Título </label>  
