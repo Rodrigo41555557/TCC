@@ -8,6 +8,7 @@
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 
+
 		if($username == '')
 			$errMsg = 'Enter username';
 		if($password == '')
@@ -63,6 +64,11 @@
 	        <h3 class="text-center"> Login </h3>
 	    </div>
     </div>
+    <?php 
+    	if($errMsg) {
+    		echo $errMsg;
+    	}
+    ?>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">

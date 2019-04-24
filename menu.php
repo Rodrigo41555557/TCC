@@ -15,24 +15,30 @@
 						<li class="nav-item">
 							<a class="nav-link text-light" href="index.php" >Início</a>
 						</li>
-						<?php
+						
+				    	<li class="nav-item" >
+				    	    <a class="nav-link text-light" href="suporte.php" >Suporte</a>
+				    	</li>
+				    <?php
 							//isset - verifica se uma variável está definida
-						    
+						if (isset($_SESSION['login'])) {// se não for o bruno
 
-							if (isset($_SESSION['login']) and $_SESSION['password'] == $_POST['password']) {// se não for o bruno	
-						?>
+					?>
 							<!--PERFIL-->
-							<li class="nav-item" >
-								<p>Você está logado!, <?=  $_SESSION['fullname']; ?>!</p>
-							</li>
-							<li class="nav-item" >
-								<a href="logout.php">Sair</a>
-							</li>
+						<li class="nav-item" >
+							<h10 class="text-light">Você está logado!, <?= $_SESSION['username']; ?>!</h10>
+						</li>
+						<li class="nav-item" >
+							<a href="login.php" action="<?= session_destroy(); ?>">Sair</a>
+						</li>
 
-						<?php
-							}else{
-						?>
+					<?php
+						}else{
+					?>
 							<!-- form de login -->
+							<li class="nav-item" >
+			                 	<a class="nav-link text-light"></a>
+			                </li>
 							<li class="nav-item" >
 			                 	<a class="nav-link text-light" href="login.php" >Entrar</a>
 			                </li>
@@ -43,12 +49,6 @@
 						<?php	
 							}	
 						?>
-				    	<li class="nav-item" >
-				    	    <a class="nav-link text-light" href="suporte.php" >Suporte</a>
-				    	</li>
-				    	<li class="nav-item" >
-				    	    <a class="nav-link text-light" href="sobrenos.php" ></a>
-				    	</li>
 				    </ul>
 					<!-- form de login 
 					<input class="form-control mr-sm-2" type="text" name="campo_busca">

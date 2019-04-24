@@ -13,7 +13,7 @@
 
 <br><br><br>
 	<div class="container">  
-		<h1>o banco de dados do site ainda não funciona</h1>
+		<h1>o banco de dados do site funciona</h1>
 		<br>
 		<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

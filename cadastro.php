@@ -34,6 +34,14 @@
                 <input type="text" name="senha" class="form-control" placeholder="Nome Completo" required="" >
             </div>
         </div>
+
+        <div class="form-group">
+            <div class="col-md-6 offset-md-3">
+                <label> Número de Telefone </label>  
+                <input type="tel" name="telefone" class="form-control" placeholder="Telefone" required="" >
+            </div>
+        </div>
+
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Senha </label>  
