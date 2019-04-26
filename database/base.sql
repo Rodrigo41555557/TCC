@@ -17,4 +17,4 @@ ALTER TABLE `user`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 INSERT INTO user (fullname, username, password, telefone)
-VALUES ('Bruno Morandim', 'bruno', 'steverogers', '912121212'), ('Ricardo Santos', 'milos123', 'milos123', '966612469'); 
+VALUES ('Bruno Ruan', 'bruno', 'steverogers', '912121212'), ('Ricardo Santos', 'milos123', 'milos123', '966612469'); 
