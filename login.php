@@ -23,7 +23,10 @@
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);
 
 				if($data == false){
-					$errMsg = "User $username not found.";
+					$errMsg = '<div class="col-md-6 offset-md-3">
+									<h5 class="text-danger text-center"> Usuário '.$username.' não existe 
+							  </h5>
+							  </div>';
 				}
 				else {
 					if($password == $data['password']) {
@@ -35,7 +38,10 @@
 						exit;
 					}
 					else
-						$errMsg = 'Password not match.';
+						$errMsg = '
+						<div class="col-md-6 offset-md-3">
+							<h5 class="text-danger text-center"> Senha Incorreta </h5>
+						</div>';
 				}
 			}
 			catch(PDOException $e) {

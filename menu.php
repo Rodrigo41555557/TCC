@@ -16,9 +16,7 @@
 							<a class="nav-link text-light" href="index.php" >Início</a>
 						</li>
 						
-				    	<li class="nav-item" >
-				    	    <a class="nav-link text-light" href="suporte.php" >Suporte</a>
-				    	</li>
+				    	
 				    <?php
 							//isset - verifica se uma variável está definida
 						if (isset($_SESSION['login'])) {// se não for o bruno
@@ -37,9 +35,6 @@
 					?>
 							<!-- form de login -->
 							<li class="nav-item" >
-			                 	<a class="nav-link text-light"></a>
-			                </li>
-							<li class="nav-item" >
 			                 	<a class="nav-link text-light" href="login.php" >Entrar</a>
 			                </li>
 			                <li class="nav-item" >
@@ -49,6 +44,10 @@
 						<?php	
 							}	
 						?>
+						
+						<li class="nav-item" >
+				    	    <a class="nav-link text-light" href="suporte.php" >Suporte</a>
+				    	</li>
 				    </ul>
 					<!-- form de login 
 					<input class="form-control mr-sm-2" type="text" name="campo_busca">
