@@ -15,7 +15,9 @@
 						<li class="nav-item">
 							<a class="nav-link text-light" href="index.php" >Início</a>
 						</li>
-						
+						<li class="nav-item" >
+				    	    <a class="nav-link text-light" href="suporte.php" >Suporte</a>
+				    	</li>
 				    	
 				    <?php
 							//isset - verifica se uma variável está definida
@@ -23,31 +25,28 @@
 
 					?>
 							<!--PERFIL-->
+					<ul class="navbar-nav mr-auto">
 						<li class="nav-item" >
-							<h10 class="text-light">Você está logado!, <?= $_SESSION['username']; ?>!</h10>
+							<b class="nav-link text-light"><?= $_SESSION['username']; ?></b>
 						</li>
 						<li class="nav-item" >
-							<a href="login.php" action="<?= session_destroy(); ?>">Sair</a>
+							<a class="nav-link text-dark" href="login.php" action="<?= session_destroy(); ?>">Sair</a>
 						</li>
-
+					</ul>
 					<?php
 						}else{
 					?>
 							<!-- form de login -->
-							<li class="nav-item" >
-			                 	<a class="nav-link text-light" href="login.php" >Entrar</a>
-			                </li>
-			                <li class="nav-item" >
-			                    <a class="nav-link text-light" href="cadastro.php" >Cadastro</a>
-			                </li>
+						<li class="nav-item" >
+			                <a class="nav-link text-light" href="login.php" >Entrar</a>
+			            </li>
+			            <li class="nav-item" >
+			                <a class="nav-link text-light" href="cadastro.php" >Cadastro</a>
+			            </li>
 				
 						<?php	
 							}	
-						?>
-						
-						<li class="nav-item" >
-				    	    <a class="nav-link text-light" href="suporte.php" >Suporte</a>
-				    	</li>
+						?>	
 				    </ul>
 					<!-- form de login 
 					<input class="form-control mr-sm-2" type="text" name="campo_busca">

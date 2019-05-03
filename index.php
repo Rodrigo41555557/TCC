@@ -25,13 +25,13 @@
 
 			<div id="resenha" class="col-sm-4 mb-5">
                 <div  class="card">
-                    <a href="sugestao.php"><img class="card-img" src="img/x.jpg" height="150px" ></a>
+                    <a href="sugestao.php"><img class="card-img" src="img/sugestao.jpg" height="150px" ></a>
                 </div>
             </div>
             
             <div id="resenha" class="col-sm-4 mb-5">
                 <div  class="card">
-                    <a href="informacao.php"><img class="card-img" src="img/x.jpg" height="150px" ></a>
+                    <a href="informacao.php"><img class="card-img" src="img/informacao.jpg" height="150px" ></a>
                 </div>
             </div>
 
@@ -46,13 +46,13 @@
             
             <div id="resenha" class="col-sm-4 mb-5">
                 <div  class="card">
-                    <a href="reclamacao.php"><img class="card-img" src="img/x.jpg" height="150px" ></a>
+                    <a href="reclamacao.php"><img class="card-img" src="img/reclamacao.jpg" height="150px" ></a>
                 </div>
             </div>
 
             <div id="resenha" class="col-sm-4 mb-5">
                 <div  class="card">
-                    <a href="denuncia.php"><img class="card-img" src="img/x.jpg" height="150px" ></a>
+                    <a href="denuncia.php"><img class="card-img" src="img/denuncia.jpg" height="150px" ></a>
                 </div>
             </div>
         </div>
