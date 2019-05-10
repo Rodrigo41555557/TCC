@@ -9,6 +9,13 @@ CREATE TABLE `user` (
   `telefone` INT(33) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+CREATE TABLE `elogio` (
+  `cod_elogio` int(10) NOT NULL,
+  `titulo` varchar(50) NOT NULL,
+  `texto_elogio` varchar(500) utf8 COLLATE utf8_general_ci NOT NULL,
+  `cod_usuario` int(5) NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 

@@ -1,3 +1,40 @@
+<?php 
+    require 'config.php';
+
+    if(isset($_POST['elogio'])) {
+        $errMsg = '';
+
+        // Get data from FROM
+        $texto_elogio = $_POST['texto_elogio'];
+        $titulo = $_POST['titulo'];
+        //provisorio
+        $nome = $_POST['cod_usuario'];
+
+        if($texto_elogio == '')
+            $errMsg = 'Escreva seu elogio';
+        if($titulo == '')
+            $errMsg = 'Escreva o título do seu elogio';
+        if($errMsg == ''){
+            try {
+                $stmt = $connect->prepare('INSERT INTO user (texto_elogio, titulo, cod_usuario) VALUES (:texto_elogio, :titulo, :cod_usuario)');
+                $stmt->execute(array(
+                    ':texto_elogio' => $texto_elogio,
+                    ':titulo' => $titulo,
+                    ':cod_usuario' => $nome
+                ));
+                header('Location: elogio.php?action=enviou');
+                exit;
+            }
+            catch(PDOException $e) {
+                echo $e->getMessage();
+            }
+        }
+    }
+
+    if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
+        $errMsg = 'Elogio enviado com sucesso';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,11 +59,15 @@
 	        <h3 class="text-center"> Mande seu Elogio </h3>
 	    </div>
     </div>
-
+    <?php 
+        if($errMsg) {
+            echo $errMsg;
+        }
+    ?>
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label >Nome</label>
-                <input type="text" name="nome" class="form-control" placeholder="Nome" required="" >    
+                <input type="text" name="cod_usuario" class="form-control" placeholder="Nome" required="" >    
             </div>
         </div>   
 
@@ -36,19 +77,12 @@
                 <input type="text" name="titulo" class="form-control" placeholder="Assunto/Título" required="" >
             </div>
         </div>   
-		
-		<div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <label> Email </label>  
-                <input type="email" name="email" class="form-control" placeholder="Email" required="" >
-            </div>
-        </div> 
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Escreva seu Elogio </label>  
                 <div>
-                <textarea class="form-control" rows="5"></textarea>
+                <textarea class="form-control" name="texto_elogio" rows="5"></textarea>
             </div>
         </div> 
 
@@ -56,7 +90,7 @@
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
-                <input type="submit" value="Enviar Elogio" class="btn btn-primary" name="">
+                <input type="submit" value="Enviar Elogio" class="btn btn-primary" name="elogio">
             </div>
         </div>
 

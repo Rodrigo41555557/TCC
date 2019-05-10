@@ -24,7 +24,7 @@
 
 				if($data == false){
 					$errMsg = '<div class="col-md-6 offset-md-3">
-									<h5 class="text-danger text-center"> Usuário '.$username.' não existe 
+									<h5 class="text-danger text-center"> Usuário '.$username.' não existe! 
 							  </h5>
 							  </div>';
 				}
