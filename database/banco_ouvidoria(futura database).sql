@@ -2,7 +2,6 @@
 -- Sql ANSI 2003 - brModelo.
 
 
-
 CREATE TABLE elogio (
 cod_elogio int(5) PRIMARY KEY,
 texto_elogio varchar(500),
