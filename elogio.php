@@ -16,7 +16,7 @@
             $errMsg = 'Escreva o título do seu elogio';
         if($errMsg == ''){
             try {
-                $stmt = $connect->prepare('INSERT INTO user (texto_elogio, titulo, cod_usuario) VALUES (:texto_elogio, :titulo, :cod_usuario)');
+                $stmt = $connect->prepare('INSERT INTO elogio (texto_elogio, titulo, cod_usuario) VALUES (:texto_elogio, :titulo, :cod_usuario)');
                 $stmt->execute(array(
                     ':texto_elogio' => $texto_elogio,
                     ':titulo' => $titulo,
@@ -82,7 +82,7 @@
             <div class="col-md-6 offset-md-3">
                 <label> Escreva seu Elogio </label>  
                 <div>
-                <textarea class="form-control" name="texto_elogio" rows="5"></textarea>
+                <input type="text" class="form-control" name="texto_elogio" rows="5"></input>
             </div>
         </div> 
 
