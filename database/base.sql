@@ -12,8 +12,8 @@ CREATE TABLE `user` (
 CREATE TABLE `elogio` (
   `cod_elogio` int(10) NOT NULL,
   `titulo` varchar(50) NOT NULL,
-  `texto_elogio` varchar(500) utf8 COLLATE utf8_general_ci NOT NULL,
-  `cod_usuario` int(5) NOT NULL,
+  `texto_elogio` varchar(255) utf8 COLLATE utf8_general_ci NOT NULL,
+  `cod_usuario` varchar(150) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 ALTER TABLE `user`

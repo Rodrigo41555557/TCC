@@ -29,27 +29,9 @@ cod_usuario int(5),
 FOREIGN KEY(cod_usuario) REFERENCES usuario (cod_usuario)
 )
 
-CREATE TABLE login (
-cod_login int(5) PRIMARY KEY,
-nome varchar(50),
-senha varchar(150),
-cod_usuario int(5),
-FOREIGN KEY(cod_usuario) REFERENCES usuario (cod_usuario)
-)
-
 CREATE TABLE sugestao (
 cod_sugestao int(5) PRIMARY KEY,
 texto_sugestao varchar(500),
-cod_usuario int(5),
-FOREIGN KEY(cod_usuario) REFERENCES usuario (cod_usuario)
-)
-
-CREATE TABLE cadastro (
-cad_nome varchar(50),
-cad_telefone int(33),
-cad_apelido varchar(50),
-cad_senha varchar(150),
-cod_cadastro int(5) PRIMARY KEY,
 cod_usuario int(5),
 FOREIGN KEY(cod_usuario) REFERENCES usuario (cod_usuario)
 )
