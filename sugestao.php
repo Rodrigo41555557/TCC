@@ -1,3 +1,39 @@
+<?php 
+    require 'config.php';
+
+    if(isset($_POST['sugestao'])) {
+        $errMsg = '';
+
+        // Get data from FROM
+        $texto_sugestao = $_POST['texto_sugestao'];
+        $titulo = $_POST['titulo'];
+        //provisorio
+        $nome = $_POST['cod_usuario'];
+    
+			if($texto_sugestao == '')
+				$errMsg = 'Escreva seu sugestao';
+			if($titulo == '')
+				$errMsg = 'Escreva o título do seu sugestao';
+			if($errMsg == ''){
+				try {
+					$stmt = $connect->prepare('INSERT INTO sugestao (texto_sugestao, titulo) VALUES (:texto_sugestao, :titulo)');
+					$stmt->execute(array(
+						':texto_sugestao' => $texto_sugestao,
+						':titulo' => $titulo
+					));
+					header('Location: sugestao.php?action=enviou');
+					exit;
+				}
+				catch(PDOException $e) {
+					echo $e->getMessage();
+				}
+			}
+    }
+
+    if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
+        $errMsg = 'Sugestão enviada com sucesso';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,13 +65,6 @@
                 <input type="text" name="nome" class="form-control" placeholder="Nome" required="" >    
             </div>
         </div> 
-		
-		<div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <label> Email </label>  
-                <input type="email" name="email" class="form-control" placeholder="Email" required="" >
-            </div>
-        </div> 
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
@@ -48,13 +77,13 @@
             <div class="col-md-6 offset-md-3">
                 <label> Escreva sua sugestão </label>  
                 <div>
-                <textarea class="form-control" rows="5"  placeholder="Escreva sua sugestão"></textarea>
+                <input type="text" class="form-control" name="texto_sugestao" rows="5"></input>
             </div>
         </div> 
         <br>
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
-                <input type="submit" value="Enviar" class="btn btn-primary" name="">
+                <input type="submit" value="Enviar" class="btn btn-primary" name="sugestao">
             </div>
         </div>
 

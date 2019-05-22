@@ -1,3 +1,39 @@
+<?php 
+    require 'config.php';
+
+    if(isset($_POST['denuncia'])) {
+        $errMsg = '';
+
+        // Get data from FROM
+        $texto_denuncia = $_POST['texto_denuncia'];
+        $titulo = $_POST['titulo'];
+        //provisorio
+        $nome = $_POST['cod_usuario'];
+    
+			if($texto_denuncia == '')
+				$errMsg = 'Escreva seu denuncia';
+			if($titulo == '')
+				$errMsg = 'Escreva o título do seu denuncia';
+			if($errMsg == ''){
+				try {
+					$stmt = $connect->prepare('INSERT INTO denuncia (texto_denuncia, titulo) VALUES (:texto_denuncia, :titulo)');
+					$stmt->execute(array(
+						':texto_denuncia' => $texto_denuncia,
+						':titulo' => $titulo
+					));
+					header('Location: denuncia.php?action=enviou');
+					exit;
+				}
+				catch(PDOException $e) {
+					echo $e->getMessage();
+				}
+			}
+    }
+
+    if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
+        $errMsg = 'Sugestão enviada com sucesso';
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,21 +72,14 @@
                 <input type="text" name="titulo" class="form-control" placeholder="Assunto/Título" required="" >
             </div>
         </div>   
-		
-		<div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <label> Email (Opcional) </label>  
-                <input type="email" name="email" class="form-control" placeholder="Email" required="" >
-            </div>
-        </div> 
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
-                <label> Escreva sua denuncia de forma anonima </label>  
+                <label> Escreva sua denucia de forma anonima! </label>  
                 <div>
-                <textarea class="form-control" rows="5"></textarea>
+                <input type="text" class="form-control" name="texto_denuncia" rows="5"></input>
             </div>
-        </div> 
+        </div>  
 
         <br>
 

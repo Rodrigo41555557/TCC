@@ -5,26 +5,26 @@ if(isset($_POST['register'])) {
     $errMsg = '';
 
     // Get data from FROM
-    $fullname = $_POST['fullname'];
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $nome_completo = $_POST['nome_completo'];
+    $apelido = $_POST['apelido'];
+    $senha = $_POST['senha'];
     $telefone = $_POST['telefone'];
 
-    if($fullname == '')
+    if($nome_completo == '')
         $errMsg = 'Digite seu Nome Completo';
-    if($username == '')
+    if($apelido == '')
         $errMsg = 'Digite seu apelido';
-    if($password == '')
+    if($senha == '')
         $errMsg = 'Digite sua senha';
     if($telefone == '')
         $errMsg = 'Digite seu telefone';
     if($errMsg == ''){
         try {
-            $stmt = $connect->prepare('INSERT INTO user (fullname, username, password, telefone) VALUES (:fullname, :username, :password, :telefone)');
+            $stmt = $connect->prepare('INSERT INTO usuario (nome_completo, apelido, senha, telefone) VALUES (:nome_completo, :apelido, :senha, :telefone)');
             $stmt->execute(array(
-                ':fullname' => $fullname,
-                ':username' => $username,
-                ':password' => $password,
+                ':nome_completo' => $nome_completo,
+                ':apelido' => $apelido,
+                ':senha' => $senha,
                 ':telefone' => $telefone
             ));
             header('Location: login.php?action=entrou');
@@ -66,14 +66,14 @@ if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label > Apelido </label>
-                <input type="text" name="username" class="form-control" placeholder="Apelido" required="" >
+                <input type="text" name="apelido" class="form-control" placeholder="Apelido" required="" >
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Nome Completo </label>  
-                <input type="text" name="fullname" class="form-control" placeholder="Nome Completo" required="" >
+                <input type="text" name="nome_completo" class="form-control" placeholder="Nome Completo" required="" >
             </div>
         </div>
 
@@ -87,7 +87,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Senha </label>  
-                <input type="password" name="password" class="form-control" placeholder="Senha" required="" >
+                <input type="password" name="senha" class="form-control" placeholder="Senha" required="" >
             </div>
         </div>
         <?php

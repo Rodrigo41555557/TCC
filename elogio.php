@@ -8,27 +8,26 @@
         $texto_elogio = $_POST['texto_elogio'];
         $titulo = $_POST['titulo'];
         //provisorio
-        $nome = $_POST['nome_usuario'];
-
-        if($texto_elogio == '')
-            $errMsg = 'Escreva seu elogio';
-        if($titulo == '')
-            $errMsg = 'Escreva o título do seu elogio';
-        if($errMsg == ''){
-            try {
-                $stmt = $connect->prepare('INSERT INTO elogio (texto_elogio, titulo, nome_usuario) VALUES (:texto_elogio, :titulo, :nome_usuario)');
-                $stmt->execute(array(
-                    ':texto_elogio' => $texto_elogio,
-                    ':titulo' => $titulo,
-                    ':nome_usuario' => $nome
-                ));
-                header('Location: elogio.php?action=enviou');
-                exit;
-            }
-            catch(PDOException $e) {
-                echo $e->getMessage();
-            }
-        }
+        $nome = $_POST['cod_usuario'];
+    
+			if($texto_elogio == '')
+				$errMsg = 'Escreva seu elogio';
+			if($titulo == '')
+				$errMsg = 'Escreva o título do seu elogio';
+			if($errMsg == ''){
+				try {
+					$stmt = $connect->prepare('INSERT INTO elogio (texto_elogio, titulo) VALUES (:texto_elogio, :titulo)');
+					$stmt->execute(array(
+						':texto_elogio' => $texto_elogio,
+						':titulo' => $titulo
+					));
+					header('Location: elogio.php?action=enviou');
+					exit;
+				}
+				catch(PDOException $e) {
+					echo $e->getMessage();
+				}
+			}
     }
 
     if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
@@ -67,7 +66,7 @@
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label >Nome</label>
-                <input type="text" name="nome_usuario" class="form-control" placeholder="Nome" required="" >    
+                <input type="text" name="cod_usuario" class="form-control" placeholder="Nome" required="" >    
             </div>
         </div>   
 

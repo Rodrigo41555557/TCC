@@ -5,7 +5,7 @@
 	define('dbhost', 'localhost');
 	define('dbuser', 'aluno');
 	define('dbpass', 'aluno');
-	define('dbname', 'login');
+	define('dbname', 'bd_ouvidoria_3info2');
 
 	// Conectando a base de dados (MySQL)
 	try {

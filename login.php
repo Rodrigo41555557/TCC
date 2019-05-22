@@ -5,35 +5,34 @@
 		$errMsg = '';
 
 		// Get data from FORM
-		$username = $_POST['username'];
-		$password = $_POST['password'];
+		$apelido = $_POST['apelido'];
+		$senha = $_POST['senha'];
 
-
-		if($username == '')
-			$errMsg = 'Enter username';
-		if($password == '')
-			$errMsg = 'Enter password';
+		if($apelido == '')
+			$errMsg = 'Enter apelido';
+		if($senha == '')
+			$errMsg = 'Enter senha';
 
 		if($errMsg == '') {
 			try {
-				$stmt = $connect->prepare('SELECT id, fullname, username, password FROM user WHERE username = :username');
+				$stmt = $connect->prepare('SELECT cod_usuario, nome_completo, apelido, senha FROM usuario WHERE apelido = :apelido');
 				$stmt->execute(array(
-					':username' => $username
+					':apelido' => $apelido
 					));
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);
 
 				if($data == false){
 					$errMsg = '<div class="col-md-6 offset-md-3">
-									<h5 class="text-danger text-center"> Usuário '.$username.' não existe! 
+									<h5 class="text-danger text-center"> Usuário '.$apelido.' não existe! 
 							  </h5>
 							  </div>';
 				}
 				else {
-					if($password == $data['password']) {
+					if($senha == $data['senha']) {
 						$_SESSION['login'] = $_POST['login'];
-						$_SESSION['name'] = $data['fullname'];
-						$_SESSION['username'] = $data['username'];
-						$_SESSION['password'] = $data['password'];
+						$_SESSION['name'] = $data['nome_completo'];
+						$_SESSION['apelido'] = $data['apelido'];
+						$_SESSION['senha'] = $data['senha'];
 						header('Location: index.php');
 						exit;
 					}
@@ -79,14 +78,14 @@
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label >Nome do Usuário</label>
-                <input type="text" name="username" class="form-control" placeholder="Nome do Usuário" required="" autocomplete="off" >    
+                <input type="text" name="apelido" class="form-control" placeholder="Nome do Usuário" required="" autocomplete="off" >    
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Senha </label>  
-                <input type="password" name="password" class="form-control" placeholder="Senha" required="" >
+                <input type="password" name="senha" class="form-control" placeholder="Senha" required="" >
             </div>
         </div>
 		<br>

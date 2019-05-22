@@ -27,7 +27,7 @@
 							<!--PERFIL-->
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item" >
-							<b class="nav-link text-light"><?= $_SESSION['username']; ?></b>
+							<b class="nav-link text-light"><?= $_SESSION['apelido']; ?></b>
 						</li>
 						<li class="nav-item" >
 							<a class="nav-link text-dark" href="login.php" action="<?= session_destroy(); ?>">Sair</a>
