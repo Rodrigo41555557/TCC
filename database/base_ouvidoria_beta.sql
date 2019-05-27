@@ -23,7 +23,7 @@ cod_elogio int(5) PRIMARY KEY NOT NULL AUTO_INCREMENT,
 texto_elogio varchar(500) NOT NULL,
 titulo varchar(50) NOT NULL,
 cod_usuario int(5),
-FOREIGN KEY(cod_usuario) REFERENCES usuario (cod_usuario)
+FOREIGN KEY (cod_usuario) REFERENCES usuario (cod_usuario)
 );
 
 CREATE TABLE `denuncia` (
@@ -60,4 +60,4 @@ INSERT INTO `adm` (`nome_adm`, `senha`) VALUES
 ( 'Admnistrador', 'administrador');
 
 INSERT INTO `elogio` (`texto_elogio`, `titulo`) VALUES
-( 'fiff faaf fiif faaf fiif faaf soos sees', 'sees ou soos');
+( 'sees, soos, sees, soos, soos, sees', 'sees ou soos');

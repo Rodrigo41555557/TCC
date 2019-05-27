@@ -108,6 +108,5 @@ DDL ansi 2003: em caso de update na tabela pai, o que deverá acontecer.&#13;
 [OnDelete]&#13;
 DDL ansi 2003: em caso de exclusão na tabela pai, o que deverá acontecer.&#13;
 [TBcOrdem]&#13;
-Ordem de conversão da tabela para o modelo físico.&#13;
-</Flash>&#13;
+Ordem de conversão da tabela para o modelo físico.&#13;</Flash>&#13;
   </AJUDA></APP>
