@@ -1,6 +1,4 @@
-<?php 
-	require 'config.php';
-?>
+
 <div class="bg-primary z-depth-5" id="cabecalho">	
 
 	<nav class="navbar navbar-expand-lg navbar-primary bg-bg-primary" >
@@ -30,7 +28,7 @@
 							<b class="nav-link text-light"><?= $_SESSION['apelido']; ?></b>
 						</li>
 						<li class="nav-item" >
-							<a class="nav-link text-dark" href="login.php" action="<?= session_destroy(); ?>">Sair</a>
+							<a class="nav-link text-dark" href="logout.php">Sair</a>
 						</li>
 					</ul>
 					<?php

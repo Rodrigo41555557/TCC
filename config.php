@@ -1,4 +1,5 @@
 <?php
+	ob_start();
 	session_start();
 
 	// Definições da base de dados
@@ -15,4 +16,9 @@
 	catch(PDOException $e) {
 		echo $e->getMessage();
 	}
+
+	if((isset ($_SESSION['login']) == true) and (isset ($_SESSION['senha']) == true))
+	{
+  		$logado = $_SESSION['login'];
+  	}
 ?>

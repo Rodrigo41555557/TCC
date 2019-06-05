@@ -1,3 +1,6 @@
+<?php
+    require 'config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +16,7 @@
 
 <br><br><br>
 
-<div class="container">            
+<div class="container">       
             
         <div id="jogos" class="row">          
             
