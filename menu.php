@@ -25,7 +25,7 @@
 							<!--PERFIL-->
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item" >
-							<b class="nav-link text-light"><?= $_SESSION['apelido']; ?></b>
+							<a href="sobremim.php"><b class="nav-link text-light"><?= $_SESSION['apelido']; ?></b></a>
 						</li>
 						<li class="nav-item" >
 							<a class="nav-link text-dark" href="logout.php">Sair</a>

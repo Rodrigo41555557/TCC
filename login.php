@@ -16,7 +16,7 @@
 
 		if($errMsg == '') {
 			try {
-				$stmt = $connect->prepare('SELECT cod_usuario, nome_completo, apelido, senha FROM usuario WHERE apelido = :apelido');
+				$stmt = $connect->prepare('SELECT cod_usuario, nome_completo, apelido, senha, telefone FROM usuario WHERE apelido = :apelido');
 				$stmt->execute(array(
 					':apelido' => $apelido
 					));
@@ -34,6 +34,7 @@
 						$_SESSION['name'] = $data['nome_completo'];
 						$_SESSION['apelido'] = $data['apelido'];
 						$_SESSION['senha'] = $data['senha'];
+						$_SESSION['telefone'] = $data['telefone'];
 						header('Location: index.php');
 						exit;
 					}

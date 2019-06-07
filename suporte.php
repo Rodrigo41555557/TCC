@@ -28,8 +28,10 @@
 		<h3>Site feito por João Pedro, Rodrigo e Willian</h3>
 		<h3>Segue emails para contato caso precise de ajuda</h3>
 		<h7><a href="#">jangojpac@gmail.com</a></h7>
-		<h3>rodrigo</h3>
-		<h3>willian</h3>
+		<br>
+		<h7><a href="#">rodrigoiag797@gmail.com</a></h7>
+		<br>
+		<h7><a href="#">williankamkesilva@gmail.com</a></h7>
 		
 	</div>
 </body>
