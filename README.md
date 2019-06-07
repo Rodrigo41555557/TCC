@@ -12,4 +12,4 @@
    Insira o código base.sql presente em TCC/database no seu banco de dados MYSQL (terminal ou phpmyadmin). Ele vai     
    automaticamente criar a base de dados "login" com a tabela usuário nele. 
 # 3. Contas:
-  pode se utilizar qualquer uma das contas para fazer login no site, ex.: nome de usuário: milos123 senha: milos123
+  pode se utilizar qualquer uma das contas para fazer login no site, ex.: nome de usuário: homem1 senha: homem
