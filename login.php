@@ -35,6 +35,7 @@
 						$_SESSION['apelido'] = $data['apelido'];
 						$_SESSION['senha'] = $data['senha'];
 						$_SESSION['telefone'] = $data['telefone'];
+						
 						header('Location: index.php');
 						exit;
 					}
@@ -63,7 +64,7 @@
 </head>
 <body class="bg-light">
 
-<?php require_once 'menu.php'; ?>	
+<?php require 'menu.php'; ?>	
 <br><br><br>
 <form method="post" action="">
 	<div class="form-group">

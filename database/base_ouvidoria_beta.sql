@@ -51,10 +51,10 @@ FOREIGN KEY(cod_usuario) REFERENCES usuario (cod_usuario)
 );
 
 INSERT INTO `usuario` (`nome_completo`, `apelido`, `senha`, `telefone`) VALUES
-( 'Bruno Ruan', 'bruno', 'steverogers', 912121212),
-( 'Rodrigo da Silva', 'rodrigo121', 'rodrigo121', 912121212),
-( 'Joao Pedro', 'jpac123', 'joao', 966612469),
-( 'Willian Kamke', 'Homem1', 'homem', 999999999);
+( 'Bruno Henrique', 'bruno', 'steverogers', 912121212),
+( 'Rodrigo Renato', 'rodrigo121', 'rodrigo121', 912121212),
+( 'Jango Jpac', 'jpac123', 'joao', 966612469),
+( 'Wike Kamian', 'Homem1', 'homem', 999999999);
 
 INSERT INTO `adm` (`nome_adm`, `senha`) VALUES
 ( 'Admnistrador', 'administrador');

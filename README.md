@@ -6,10 +6,10 @@
     https://github.com/Rodrigo41555557/TCC.git
 # 2. Base de dados (versão em construção): 
   Entrar no Phpmyadmin e crie a base de dados com o nome "ouvidoria", selecione a opção "utf8_general_ci" e clique em criar, então              
-  insira o código "base_ouvidoria_beta.sql" presente em TCC/database. 
-  (cadastro de elogio, sugestao, reclamação e denuncia serão finalizados em breve)
+  insira o código "banco_ouvidoria(futura database).sql" presente em TCC/database. 
+  (cadastro de elogio, sugestao, reclamação e denuncia serão adicionados em breve)
   # 2.1 Base de dados (versão funcional no momento):
    Insira o código base.sql presente em TCC/database no seu banco de dados MYSQL (terminal ou phpmyadmin). Ele vai     
    automaticamente criar a base de dados "login" com a tabela usuário nele. 
 # 3. Contas:
-  pode se utilizar qualquer uma das contas para fazer login no site, ex.: nome de usuário: homem1 senha: homem
+  pode se utilizar qualquer uma das contas para fazer login no site, ex.: nome de usuário: milos123 senha: milos123

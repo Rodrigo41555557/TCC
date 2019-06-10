@@ -18,17 +18,17 @@
 
 <div class="container">    
 
-	<br><br><br>
-    <h3><?= $resenha_encontrada['nome'] ?></h3>
+	<br>
     <br>
-    <div id="jogos" class="row">
+    <br>
+    <div id="showuser" class="row">
 
 
         <div class="col-sm-4 mb-5">
             <li class="list-group-item">Nome do Usuário: <?= $_SESSION['apelido'] ?></li>
 
             <li class="list-group-item">
-				<a class="nav-link text-secondary" href="index.php" >Editar Informações do Usuário</a>
+				<a class="nav-link text-secondary" href="editar_user.php" >Editar Informações do Usuário</a>
 			</li>
 
         </div>
@@ -47,6 +47,7 @@
         </div>
 
     </div>   
+
 
 </div>
 </body>
