@@ -54,7 +54,8 @@ INSERT INTO `usuario` (`nome_completo`, `apelido`, `senha`, `telefone`) VALUES
 ( 'Bruno Henrique', 'bruno', 'steverogers', 912121212),
 ( 'Rodrigo Renato', 'rodrigo121', 'rodrigo121', 912121212),
 ( 'Jango Jpac', 'jpac123', 'joao', 966612469),
-( 'Wike Kamian', 'Homem1', 'homem', 999999999);
+( 'Wike Kamian', 'Homem1', 'homem', 999999999),
+('juniiiorr', 'Julinho da ak', 'julio', '999887452');
 
 INSERT INTO `adm` (`nome_adm`, `senha`) VALUES
 ( 'Admnistrador', 'administrador');
