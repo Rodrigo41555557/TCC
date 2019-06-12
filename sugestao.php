@@ -11,9 +11,9 @@
         $nome = $_POST['cod_usuario'];
     
 			if($texto_sugestao == '')
-				$errMsg = 'Escreva seu sugestao';
+				$errMsg = 'Escreva sua sugestao';
 			if($titulo == '')
-				$errMsg = 'Escreva o título do seu sugestao';
+				$errMsg = 'Escreva o título do sua sugestao';
 			if($errMsg == ''){
 				try {
 					$stmt = $connect->prepare('INSERT INTO sugestao (texto_sugestao, titulo) VALUES (:texto_sugestao, :titulo)');

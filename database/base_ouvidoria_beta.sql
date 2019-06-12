@@ -28,7 +28,7 @@ FOREIGN KEY (cod_usuario) REFERENCES usuario (cod_usuario)
 
 CREATE TABLE `denuncia` (
 cod_denuncia int(5) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-texto_usuario varchar(500) NOT NULL,
+texto_denuncia varchar(500) NOT NULL,
 titulo varchar(50) NOT NULL,
 cod_usuario int(5),
 FOREIGN KEY(cod_usuario) REFERENCES usuario (cod_usuario)
