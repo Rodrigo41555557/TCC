@@ -1,4 +1,4 @@
--- Geração de Modelo físico
+-- GeraÃ§Ã£o de Modelo fÃ­sico
 -- Sql ANSI 2003 - brModelo.
 
 CREATE DATABASE bd_ouvidoria_3info2;
@@ -53,7 +53,7 @@ FOREIGN KEY(cod_usuario) REFERENCES usuario (cod_usuario)
 INSERT INTO `usuario` (`nome_completo`, `apelido`, `senha`, `telefone`) VALUES
 ( 'Bruno Henrique', 'bruno', 'steverogers', 912121212),
 ( 'Rodrigo Renato', 'rodrigo121', 'rodrigo121', 912121212),
-( 'Jango Jpac', 'jpac123', 'joao', 966612469),
+( 'Jango Jepaque', 'jpac123', 'joao', 966612469),
 ( 'Wike Kamian', 'Homem1', 'homem', 999999999),
 ('juniiiorr', 'Julinho da ak', 'julio', '999887452');
 
