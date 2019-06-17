@@ -38,7 +38,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sistema de ouvidoria do lorem ipsum</title>
+    <title>Ouvindo Você!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -65,13 +65,15 @@
                 <label> Assunto/Título </label>  
                 <input type="text" name="titulo" class="form-control" placeholder="Assunto/Título" required="" >
             </div>
+             
         </div>  
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Escreva sua Denuncia </label>  
                 <div>
-                <input type="text" class="form-control" name="texto_denuncia" rows="5"></input>
+                <input type="text" class="form-control" name="texto_denuncia" rows="5" placeholder="Escreva sua Denuncia" required="">
+                </input>
             </div>
         </div> 
         <br>
@@ -79,6 +81,7 @@
             <div class="col-md-6 offset-md-3">
                 <input type="submit" value="Enviar" class="btn btn-primary" name="denuncia">
             </div>
+
         </div>
 
     </form> 

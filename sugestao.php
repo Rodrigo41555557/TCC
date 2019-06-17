@@ -37,7 +37,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sistema de ouvidoria do lorem ipsum</title>
+    <title>Ouvindo Você!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -77,7 +77,7 @@
             <div class="col-md-6 offset-md-3">
                 <label> Escreva sua sugestão </label>  
                 <div>
-                <input type="text" class="form-control" name="texto_sugestao" rows="5"></input>
+                <input type="text" class="form-control" name="texto_sugestao" rows="5" placeholder="Escreva sua Sugestão" required=""></input>
             </div>
         </div> 
         <br>

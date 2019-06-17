@@ -13,9 +13,6 @@
 						<li class="nav-item">
 							<a class="nav-link text-light" href="index.php" >Início</a>
 						</li>
-						<li class="nav-item" >
-				    	    <a class="nav-link text-light" href="suporte.php" >Suporte</a>
-				    	</li>
 				    	
 				    <?php
 							//isset - verifica se uma variável está definida
@@ -45,6 +42,10 @@
 						<?php	
 							}	
 						?>	
+
+						<li class="nav-item" >
+				    	    <a class="nav-link text-light" href="suporte.php" >Suporte</a>
+				    	</li>
 				    </ul>
 					<!-- form de login 
 					<input class="form-control mr-sm-2" type="text" name="campo_busca">
