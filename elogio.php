@@ -89,7 +89,7 @@
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
-                <input type="submit" value="Enviar Elogio" class="btn btn-primary" name="elogio">
+                <input type="submit" value="Enviar " class="btn btn-primary" name="elogio">
             </div>
         </div>
 

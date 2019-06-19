@@ -2,18 +2,18 @@
 <?php
 require 'config.php';
 
-$codigo = ;
+$codigo = $_SESSION['id'];
 $nome = '';
 $sobrenome = '';
 $email = '';
-/*if(isset($_POST['save'])) {
+if(isset($_POST['save'])) {
     $errMsg = '';
 
     // Get data from FROM
-    $nome_completo = $_SESSION['nome_completo'];
-    $apelido = $_SESSION['apelido'];
-    $senha = $_SESSION['senha'];
-    $telefone = $_SESSION['telefone'];
+    $nome_completo = $_SESSION['nome_completoalt'];
+    $apelido = $_SESSION['apelidoalt'];
+    $senha = $_SESSION['senhaalt'];
+    $telefone = $_SESSION['telefonealt'];
 
     if($nome_completo == '')
         $errMsg = 'Digite seu Nome Completo';
@@ -25,7 +25,7 @@ $email = '';
         $errMsg = 'Digite seu telefone';
     if($errMsg == ''){
         try {
-            $stmt = $connect->prepare("UPDATE usuario SET ('nome_completo' = :nome_completo, 'apelido' = :apelido, 'senha' = :senha, 'telefone' = :telefone) WHERE usuario(cod_usuario) = '$_SESSION['ID']'");
+            $stmt = $connect->prepare("UPDATE usuario SET ('nome_completo' = :nome_completo, 'apelido' = :apelido, 'senha' = :senha, 'telefone' = :telefone) WHERE usuario(cod_usuario) = '$_SESSION['id']");
             $stmt->execute(array(
                 ':nome_completo' => $nome_completo,
                 ':apelido' => $apelido,
@@ -72,35 +72,43 @@ if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label > Apelido </label>
-                <input type="text" name="apelido" class="form-control" placeholder="Apelido" required="" >
+                <input type="text" name="apelidoalt" class="form-control" placeholder="Apelido" required="" >
             </div>
         </div>
+        <?php 
+        conexao
+        select dados where id = Session
+        extrair os campos..
+        colocar no form.
+
+        $nome='Eduardo';
+        ?>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Nome Completo </label>  
-                <input type="text" name="nome_completo" class="form-control" placeholder="Nome Completo" required="" >
+                <input type="text" name="nome_completoalt" value="<?php echo $nome; ?>" class="form-control" placeholder="Nome Completo" required="" >
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Número de Telefone </label>  
-                <input type="tel" name="telefone" class="form-control" placeholder="Telefone" required="" >
+                <input type="tel" name="telefonealt" class="form-control" placeholder="Telefone" required="" >
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Senha </label>  
-                <input type="password" name="senha" class="form-control" placeholder="Senha" required="" >
+                <input type="password" name="senhaalt" class="form-control" placeholder="Senha" required="" >
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Confirmar senha </label>  
-                <input type="password" name="senha" class="form-control" placeholder="Confirmar senha" required="" >
+                <input type="password" name="senhaalt" class="form-control" placeholder="Confirmar senha" required="" >
             </div>
         </div>
 

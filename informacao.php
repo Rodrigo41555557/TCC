@@ -14,6 +14,10 @@
 
 <?php require_once 'menu.php'; ?>
 
+
+<br><br><br>
+
+
 <div class="container bg-light"> 
 
 	<div class="form-group">
@@ -52,14 +56,14 @@
 
         </div>
 
-
+<br><br><br><br><br><br><br><br><br><br><br>
             
 </div>
 </div>
 
-    <div id="info" class="row"> 
+    <!-- <div id="info" class="row">  -->
 
-        <footer id="registros" class="footer bg-primary">   
+        <!-- <footer id="registros" class="footer bg-primary">   
 
             <div id="resenha" class="col-sm-3 mb-5">
                 <div  class="card">
@@ -76,8 +80,8 @@
 
         
 
-        </footer>
+        </footer> -->
 
-    </div>
+<?php include 'rodape.php'; ?>
 </body>
 </html>

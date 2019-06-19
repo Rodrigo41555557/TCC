@@ -30,6 +30,7 @@
 				}
 				else {
 					if($senha == $data['senha']) {
+						$_SESSION['id'] = $data['cod_usuario'];
 						$_SESSION['login'] = $_POST['login'];
 						$_SESSION['name'] = $data['nome_completo'];
 						$_SESSION['apelido'] = $data['apelido'];
