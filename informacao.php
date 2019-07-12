@@ -32,7 +32,7 @@
             
             <div id="info_elogio" class="col-sm-3 mb-4">
                 <div  class="card">
-                    <a href="elogio.php"><img class="card-img" src="img/elogio.jpg" height="150px"></a>
+                    <a href="info_elogio.php"><img class="card-img" src="img/elogio.jpg" height="150px"></a>
                 </div>
             </div>
 
