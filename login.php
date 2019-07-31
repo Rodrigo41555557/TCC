@@ -113,5 +113,6 @@
 		
 </form>
 
+<?php include 'rodape.php'; ?>
 </body>
 </html>

@@ -23,6 +23,6 @@
 	<div class="container bg-light">
 		
 	</div>
-
+<?php include 'rodape.php'; ?>
 </body>
 </html>

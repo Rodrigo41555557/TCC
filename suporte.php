@@ -34,5 +34,6 @@
 		<h7><a href="#">williankamkesilva@gmail.com</a></h7>
 		
 	</div>
+	<?php include 'rodape.php'; ?>
 </body>
 </html>

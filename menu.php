@@ -43,9 +43,6 @@
 							}	
 						?>	
 
-						<li class="nav-item" >
-				    	    <a class="nav-link text-light" href="suporte.php" >Suporte</a>
-				    	</li>
 				    </ul>
 					<!-- form de login 
 					<input class="form-control mr-sm-2" type="text" name="campo_busca">

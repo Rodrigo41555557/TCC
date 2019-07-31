@@ -112,5 +112,6 @@ if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
 	</form>
 </div>
 
+<?php include 'rodape.php'; ?>
 </body>
 </html>
