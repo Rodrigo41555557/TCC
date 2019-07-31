@@ -34,6 +34,7 @@ if(isset($_POST['save'])) {
             ));
             header('Location: login.php?action=entrou');
             exit;
+            
         }
         catch(PDOException $e) {
             echo $e->getMessage();
