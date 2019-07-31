@@ -61,13 +61,6 @@
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
-                <label >Nome</label>
-                <input type="text" name="nome" class="form-control" placeholder="Nome" required="" >    
-            </div>
-        </div> 
-
-        <div class="form-group">
-            <div class="col-md-6 offset-md-3">
                 <label> Assunto/Título </label>  
                 <input type="text" name="titulo" class="form-control" placeholder="Assunto/Título" required="" >
             </div>

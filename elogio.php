@@ -63,12 +63,6 @@
             echo $errMsg;
         }
     ?>
-        <div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <label >Nome</label>
-                <input type="text" name="cod_usuario" class="form-control" placeholder="Nome" required="" >    
-            </div>
-        </div>   
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">

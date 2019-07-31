@@ -101,7 +101,7 @@
 
 		<div class="form-group">
             <div class="col-md-6 offset-md-3">
-                <a href="login/recuperar_senha.html">Esqueceu a senha?</a>
+                <a href="recuperar_senha.php">Esqueceu a senha?</a>
             </div>
         </div>
 
