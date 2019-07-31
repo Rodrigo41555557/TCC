@@ -10,10 +10,10 @@ if(isset($_POST['save'])) {
     $errMsg = '';
 
     // Get data from FROM
-    $nome_completo = $_SESSION['nome_completoalt'];
-    $apelido = $_SESSION['apelidoalt'];
-    $senha = $_SESSION['senhaalt'];
-    $telefone = $_SESSION['telefonealt'];
+    $nome_completo = $_SESSION['nome_completo'];
+    $apelido = $_SESSION['apelido'];
+    $senha = $_SESSION['senha'];
+    $telefone = $_SESSION['telefone'];
 
     if($nome_completo == '')
         $errMsg = 'Digite seu Nome Completo';
