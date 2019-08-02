@@ -14,7 +14,7 @@
                         <li><a href="suporte.php"><i class="fa fa-angle-double-right"></i>Suporte</a></li>
                     </ul>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="col-xs-12 col-sm- col-md-4">
                     <h5>Contato</h5>
                     <ul class="list-unstyled quick-links">
                         <li><i class="fa fa-angle-double-right"></i><b>jangojpac@gmail.com</b></li>
@@ -26,8 +26,6 @@
                     <h5>Localização</h5>
                     <ul class="list-unstyled quick-links">
                         <li><a href="https://www.google.com/search?ei=zX5BXc2jIr_Z5OUPo62Q6Ao&q=ifc+araquari&oq=ifc+araquari&gs_l=psy-ab.12..35i39l2j0l8.2350.2350..8087...0.0..0.94.94.1......0....1..gws-wiz.......0i71.CtjmSGamfR4&ved=0ahUKEwiNvvCIit_jAhW_LLkGHaMWBK0Q4dUDCAo"><i class="fa fa-angle-double-right"></i>Instituto Federal Catarinense</a></li>
-
-                        <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
                     </ul>
                 </div>
             </div>
@@ -45,8 +43,8 @@
             </div>  
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-                    <p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
-                    <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+                    <p><u><a href="https://www.nationaltransaction.com/">Site feito por João Pedro, Rodrigo e Willian</a></u></p>
+                    <p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank"></a></p>
                 </div>
                 </hr>
             </div>  
