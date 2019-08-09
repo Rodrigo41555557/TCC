@@ -2,18 +2,21 @@
 <?php
 require 'config.php';
 
-$codigo = $_SESSION['id'];
-$nome = '';
-$sobrenome = '';
-$email = '';
 if(isset($_POST['save'])) {
     $errMsg = '';
 
-    // Get data from FROM
+    // Pegar o usuario registrado
     $nome_completo = $_SESSION['nome_completo'];
     $apelido = $_SESSION['apelido'];
     $senha = $_SESSION['senha'];
     $telefone = $_SESSION['telefone'];
+
+    // Pegar os dados alterados
+    $nome_completoalt = $_POST['nome_completo'];
+    $apelidoalt = $_POST['apelido'];
+    $senhaalt = $_POST['senha'];
+    $telefonealt = $_POST['telefone'];
+
 
     if($nome_completo == '')
         $errMsg = 'Digite seu Nome Completo';
@@ -25,13 +28,11 @@ if(isset($_POST['save'])) {
         $errMsg = 'Digite seu telefone';
     if($errMsg == ''){
         try {
-            $stmt = $connect->prepare("UPDATE usuario SET ('nome_completo' = :nome_completo, 'apelido' = :apelido, 'senha' = :senha, 'telefone' = :telefone) WHERE usuario(cod_usuario) = '$_SESSION['id']");
-            $stmt->execute(array(
-                ':nome_completo' => $nome_completo,
-                ':apelido' => $apelido,
-                ':senha' => $senha,
-                ':telefone' => $telefone
-            ));
+            $stmt = $connect->prepare('INSERT INTO usuario (nome_completo, apelido, senha, telefone) VALUES (:nome_completo, :apelido, :senha, :telefone)');
+            $sql = "UPDATE `usuario` SET `nome_completo` = '$nome_completoalt', `apelido` = '$apelidoalt', `senha` = '$senhaalt', `telefone` = '$telefonealt' WHERE `cod_usuario` = '.$_SESSION['id'].'";
+			$dpo->prepare($sql);
+			$stmt->execute([$nome_completoalt, $apelidoalt, $senhaalt, $telefonealt
+			]);
             header('Location: login.php?action=entrou');
             exit;
             
@@ -42,9 +43,6 @@ if(isset($_POST['save'])) {
     }
 }
 
-if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
-    $errMsg = 'Usuário registrado com sucesso! agora você pode <a href="login.php">logar</a>';
-}*/
 ?>
 
 <!DOCTYPE html>
@@ -73,22 +71,15 @@ if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label > Apelido </label>
-                <input type="text" name="apelidoalt" class="form-control" placeholder="Apelido" required="" >
+                <input type="text" name="apelido" class="form-control" placeholder="Apelido" required="" >
             </div>
         </div>
-        <?php 
-        conexao
-        select dados where id = Session
-        extrair os campos..
-        colocar no form.
 
-        $nome='Eduardo';
-        ?>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Nome Completo </label>  
-                <input type="text" name="nome_completoalt" value="<?php echo $nome; ?>" class="form-control" placeholder="Nome Completo" required="" >
+                <input type="text" name="nome_completoalt" value="nome" class="form-control" placeholder="Nome Completo" required="" >
             </div>
         </div>
 
@@ -109,7 +100,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Confirmar senha </label>  
-                <input type="password" name="senhaalt" class="form-control" placeholder="Confirmar senha" required="" >
+                <input type="password" name="senha" class="form-control" placeholder="Confirmar senha" required="" >
             </div>
         </div>
 
