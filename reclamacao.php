@@ -29,6 +29,7 @@
                 }
             }
     }
+    
 
     if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
         $errMsg = 'Reclamação enviada com sucesso';
