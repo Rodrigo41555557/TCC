@@ -30,6 +30,10 @@
             <li class="list-group-item">
 				<a class="nav-link text-secondary" href="editar_user.php" >Editar Informações do Usuário</a>
 			</li>
+			
+			<li class="list-group-item">
+				<a class="nav-link text-danger" href="excluir_user.php" >Excluir Usuário</a>
+			</li>
 
         </div>
 
