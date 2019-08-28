@@ -28,6 +28,7 @@
 							<a class="nav-link text-dark" href="logout.php">Sair</a>
 						</li>
 					</ul>
+
 					<?php
 						}else{
 					?>

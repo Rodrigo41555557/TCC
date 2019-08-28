@@ -1,5 +1,6 @@
 <?php
-    require 'funcip.php';
+require 'config.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +19,7 @@
 
 <div class="container">       
             
-        <div id="jogos" class="row">          
+        <div id="opcoes" class="row">          
             
             <div id="resenha" class="col-sm-4 mb-5">
                 <div  class="card">

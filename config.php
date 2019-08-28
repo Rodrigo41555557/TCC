@@ -16,7 +16,7 @@
 	catch(PDOException $e) {
 		echo $e->getMessage();
 	}
-
+	//verifica a existência de um usuário
 	if((isset ($_SESSION['login']) == true) and (isset ($_SESSION['senha']) == true))
 	{
   		$logado = $_SESSION['login'];

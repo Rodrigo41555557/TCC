@@ -2,47 +2,46 @@
 <?php
 require 'config.php';
 
-if(isset($_POST['save'])) {
-    $errMsg = '';
+if(empty($_SESSION['apelido'])){
+		header('Location: login.php');
 
-    // Pegar o usuario registrado
-    $nome_completo = $_SESSION['nome_completo'];
-    $apelido = $_SESSION['apelido'];
-    $senha = $_SESSION['senha'];
-    $telefone = $_SESSION['telefone'];
+	if(isset($_POST['save'])) {
+		$errMsg = '';
 
-    // Pegar os dados alterados
-    $nome_completoalt = $_POST['nome_completo'];
-    $apelidoalt = $_POST['apelido'];
-    $senhaalt = $_POST['senha'];
-    $telefonealt = $_POST['telefone'];
+		// Getting data from FROM
+		$nome = $_POST['nome_completo'];
+		$senha = $_POST['senha'];
+		$confSenha = $_POST['confsenha'];
+        $telefone = $_POST['telefone'];
 
-
-    if($nome_completo == '')
-        $errMsg = 'Digite seu Nome Completo';
-    if($apelido == '')
-        $errMsg = 'Digite seu apelido';
-    if($senha == '')
-        $errMsg = 'Digite sua senha';
-    if($telefone == '')
-        $errMsg = 'Digite seu telefone';
-    if($errMsg == ''){
-        try {
-            $stmt = $connect->prepare('INSERT INTO usuario (nome_completo, apelido, senha, telefone) VALUES (:nome_completo, :apelido, :senha, :telefone)');
-            $sql = "UPDATE `usuario` SET `nome_completo` = '$nome_completoalt', `apelido` = '$apelidoalt', `senha` = '$senhaalt', `telefone` = '$telefonealt' WHERE `cod_usuario` = '.$_SESSION['id'].'";
-			$dpo->prepare($sql);
-			$stmt->execute([$nome_completoalt, $apelidoalt, $senhaalt, $telefonealt
-			]);
-            header('Location: login.php?action=entrou');
-            exit;
-            
+		if($senha != $confSenha){
+			$errMsg = 'Senha Incorreta.';
         }
-        catch(PDOException $e) {
-            echo $e->getMessage();
-        }
+
+		if($errMsg == '') {
+			try {
+		      $sql = "UPDATE usuario SET nome_completo = :nome_completo, senha = :senha, telefone = :telefone WHERE apelido = :apelido";
+		      $stmt = $connect->prepare($sql);                                  
+		      $stmt->execute(array(
+		        ':nome_completo' => $nome_completo,
+		        ':senha' => $senha,
+                ':telefone' => $telefone,
+		        ':apelido' => $_SESSION['apelido']
+		      ));
+				header('Location: editar_user.php?action=alterado');
+				exit;
+
+			}
+			catch(PDOException $e) {
+				$errMsg = $e->getMessage();
+			}
+		}
+	}
+
+	if(isset($_GET['action']) && $_GET['action'] == 'updated'){
+		$errMsg = 'Usuário alterado com sucesso!';
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -79,33 +78,32 @@ if(isset($_POST['save'])) {
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Nome Completo </label>  
-                <input type="text" name="nome_completoalt" value="nome" class="form-control" placeholder="Nome Completo" required="" >
+                <input type="text" name="nome_completo" class="form-control" placeholder="Nome Completo" required="" >
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Número de Telefone </label>  
-                <input type="tel" name="telefonealt" class="form-control" placeholder="Telefone" required="" >
+                <input type="tel" name="telefone" class="form-control" placeholder="Telefone" required="" >
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Senha </label>  
-                <input type="password" name="senhaalt" class="form-control" placeholder="Senha" required="" >
+                <input type="password" name="senha" class="form-control" placeholder="Senha" required="" >
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Confirmar senha </label>  
-                <input type="password" name="senha" class="form-control" placeholder="Confirmar senha" required="" >
+                <input type="password" name="confsenha" class="form-control" placeholder="Confirmar senha" required="" >
             </div>
         </div>
 
 
-        ?>
     <br>
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
