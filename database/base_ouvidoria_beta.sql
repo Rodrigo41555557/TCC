@@ -30,24 +30,24 @@ CREATE TABLE `denuncia` (
 cod_denuncia int(5) PRIMARY KEY NOT NULL AUTO_INCREMENT,
 texto_denuncia varchar(500) NOT NULL,
 titulo varchar(50) NOT NULL,
-cod_usuario int(5),
-FOREIGN KEY(cod_usuario) REFERENCES usuario (cod_usuario)
+den_cod_usuario int(5),
+FOREIGN KEY(den_cod_usuario) REFERENCES usuario (cod_usuario)
 );
 
 CREATE TABLE `sugestao` (
 cod_sugestao int(5) PRIMARY KEY NOT NULL AUTO_INCREMENT,
 texto_sugestao varchar(500) NOT NULL,
 titulo varchar(50) NOT NULL,
-cod_usuario int(5),
-FOREIGN KEY(cod_usuario) REFERENCES usuario (cod_usuario)
+sug_cod_usuario int(5),
+FOREIGN KEY(sug_cod_usuario) REFERENCES usuario (cod_usuario)
 );
 
 CREATE TABLE `reclamacao` (
 cod_reclamacao int(5) PRIMARY KEY NOT NULL AUTO_INCREMENT,
 texto_reclamacao varchar(500) NOT NULL,
 titulo varchar(50) NOT NULL,
-cod_usuario int(5),
-FOREIGN KEY(cod_usuario) REFERENCES usuario (cod_usuario)
+rec_cod_usuario int(5),
+FOREIGN KEY(rec_cod_usuario) REFERENCES usuario (cod_usuario)
 );
 
 INSERT INTO `usuario` (`nome_completo`, `apelido`, `senha`, `telefone`) VALUES
