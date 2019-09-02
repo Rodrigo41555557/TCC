@@ -22,8 +22,8 @@ CREATE TABLE `elogio` (
 cod_elogio int(5) PRIMARY KEY NOT NULL AUTO_INCREMENT,
 texto_elogio varchar(500) NOT NULL,
 titulo varchar(50) NOT NULL,
-elo_cod_usuario int(5) NOT NULL,
-FOREIGN KEY (cod_usuario) REFERENCES usuario (cod_usuario)
+elo_cod_usuario int(5),
+FOREIGN KEY (elo_cod_usuario) REFERENCES usuario (cod_usuario)
 );
 
 CREATE TABLE `denuncia` (

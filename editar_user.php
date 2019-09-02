@@ -20,7 +20,7 @@ if(empty($_SESSION['apelido'])){
 
 		if($errMsg == '') {
 			try {
-		      $sql = "UPDATE usuario SET nome_completo = :nome_completo, senha = :senha, telefone = :telefone WHERE apelido = :apelido";
+		      $sql = 'UPDATE usuario SET nome_completo = :nome_completo, senha = :senha, telefone = :telefone WHERE apelido = :apelido and cod_usuario = '.$_SESSION['id'];
 		      $stmt = $connect->prepare($sql);                                  
 		      $stmt->execute(array(
 		        ':nome_completo' => $nome_completo,
@@ -38,7 +38,7 @@ if(empty($_SESSION['apelido'])){
 		}
 	}
 
-	if(isset($_GET['action']) && $_GET['action'] == 'updated'){
+	if(isset($_GET['action']) && $_GET['action'] == 'alterado'){
 		$errMsg = 'Usuário alterado com sucesso!';
     }
 }
@@ -112,6 +112,7 @@ if(empty($_SESSION['apelido'])){
         </div>
 
 	</form>
+<br><br><br>
 </div>
 <?php include 'rodape.php'; ?>
 </body>
