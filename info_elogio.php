@@ -1,8 +1,13 @@
 <?php
 require 'config.php';
 
-	//$stmt =  $connect->stmt_init();
-	//$stmt->prepare("SELECT texto_elogio, titulo FROM elogio");
+	$sql = "SELECT texto_elogio, titulo FROM `elogio`";
+	$stmt = $connect->prepare($sql);  
+	$stmt->execute(array(
+        $_POST['texto_elogio'] = `texto_elogio`,
+        $_POST['titulo'] = `titulo`
+    ));
+	
 
 ?>
 <!DOCTYPE html>
@@ -24,7 +29,22 @@ require 'config.php';
 
 		<h1 class="text-center text-dark">Em construção</h1>
 
+	<div id="showuser" class="row">
+
+		
+        <div class="col-sm-4 mb-5">
+        	<li class="list-group-item">Quem Escreveu: jao</li>
+
+            <li class="list-group-item">Assunto:  <?= $_POST['titulo'] ?></li>
+            <li class="list-group-item"><?= $_POST['texto_elogio'] ?></li>
+
+			
+        </div>
+
+    </div>
+
 </div>
 
 </body>
 </html>
+
