@@ -1,27 +1,5 @@
-
 <?php
 require 'config.php';
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Sistema de ouvidoria do lorem ipsum</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/estilo.css">
-</head>
-<body class="bg-light">
-
-<?php require_once 'menu.php'; ?>	
-<br><br><br>
-
-<div id="conteudo" class="contanier">
-	<form method="post" action="">
-		
-<?php
-
 if(empty($_SESSION['id'])){
         header('Location: login.php');
 
@@ -54,7 +32,7 @@ if(empty($_SESSION['id'])){
                 ':apelido' => $_SESSION['apelido']
               ));
                 header('Location: editar_user.php?action=alterado');
-                exit;
+                ;
 
             }
             catch(PDOException $e) {
@@ -65,10 +43,26 @@ if(empty($_SESSION['id'])){
 
     if(isset($_GET['action']) && $_GET['action'] == 'alterado')
         $errMsg = 'Usuário alterado com sucesso!';
-    
-}
-?>		
-		
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sistema de ouvidoria do lorem ipsum</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="bg-light">
+
+<?php require_once 'menu.php'; ?>	
+<br><br><br>
+
+<div id="conteudo" class="contanier">
+	<form method="post" action="">
+			
 		<div class="form-group">
         	<div class="col-md-6 offset-md-3">
 	        	<h3 class="text-center"> Alterar Usuário </h3>
@@ -79,7 +73,7 @@ if(empty($_SESSION['id'])){
                 if(isset($errMsg)){
                     echo '<div class="form-group">
                                 <div class="col-md-6 offset-md-3">
-                                    <h3 class="text-center">' .$errMsg. '</h3>
+                                    <h3 class="text-center text-danger">' .$errMsg. '</h3>
                                 </div>
                           </div>';
                 }

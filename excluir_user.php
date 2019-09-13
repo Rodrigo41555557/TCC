@@ -1,7 +1,16 @@
-<?php
+ <?php
 require 'config.php';
+	if($errMsg == ''){
+			try {
+				$sql = "DELETE FROM `usuario` WHERE `usuario`.`cod_usuario` = $_SESSION['id']";
+				header('Location: elogio.php?action=enviou');
+					;
+				}
+				catch(PDOException $e) {
+					echo $e->getMessage();
+				}
+			}
 	
-	//mysqli_execute("DELETE FROM `usuario` WHERE `usuario`.`cod_usuario` = $_SESSION['id']");
 ?>
 
 <!DOCTYPE html>
@@ -18,44 +27,5 @@ require 'config.php';
 <?php require_once 'menu.php'; ?>	
 <br><br><br>
 
-<div id="conteudo" class="contanier">
-	<form method="post" action="">
-
-		<nav class="navbar navbar-expand-lg navbar-primary bg-bg-primary" >
-		<a href="index.php"><img src="img/x.jpg" width="30" height="30" alt=""></a>
-
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">						
-			</ul>
-
-				<form method="post" action="funcip.php" class="form-inline my-2 my-lg-0">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item">
-							<a class="nav-link text-light" href="index.php" >Início</a>
-						</li>
-						<li class="nav-item" >
-			                <a class="nav-link text-light" href="login.php" >Entrar</a>
-			            </li>
-			            <li class="nav-item" >
-			                <a class="nav-link text-light" href="cadastro.php" >Cadastro</a>
-			            </li>
-
-				    </ul>
-
-				</form>
-
-			</div>
-		</nav>
-
-		<div class="form-group">
-        	<div class="col-md-6 offset-md-3">
-	        	<h3 class="text-center"> Excluir usuário </h3>
-	    	</div>
-    	</div>
-
-        </div>
-
-    </form>
-</div>
 </body>
 </html>
