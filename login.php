@@ -74,7 +74,7 @@
 	    </div>
     </div>
     <?php 
-    	if($errMsg) {
+    	if(isset($errMsg)) {
     		echo $errMsg;
     	}
     ?>
