@@ -18,9 +18,12 @@
 
 <div class="container">    
 
-	<br>
-    <br>
-    <br>
+	<br><br><br>
+    <?php 
+        if(isset($_GET['alterado'])) {
+            echo '<div class="col-md-6 offset-md-3"><h5 class="text-danger text-center"><?= $_POST['."'alterado'".']; ?></h5></div>';
+        }
+    ?>
     <div id="showuser" class="row">
 
 
