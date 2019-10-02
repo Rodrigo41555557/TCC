@@ -1,16 +1,6 @@
  <?php
 require 'config.php';
-	if($errMsg == ''){
-			try {
-				$sql = "DELETE FROM `usuario` WHERE `usuario`.`cod_usuario` = $_SESSION['id']";
-				header('Location: elogio.php?action=enviou');
-					;
-				}
-				catch(PDOException $e) {
-					echo $e->getMessage();
-				}
-			}
-	
+		
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +16,32 @@ require 'config.php';
 
 <?php require_once 'menu.php'; ?>	
 <br><br><br>
+	<div class="container">
+		<form method="post" action="sobremim.php">
+			<div class="form-group">
+        		<div class="col-md-6 offset-md-3">
+	        		<h3 class="text-center"> Você tem certeza que deseja excluír sua conta? </h3>
+	    		</div>
+    		</div>
+    		<div class="form-group">
+        		<div class="col-md-6 offset-md-3 form-check">
+        			<input type="checkbox" id="confirma" required="" class="form-check-input"> 
+        			<label class="form-check-label" for="confirma">Entendo que o que estou fazendo não poderá ser revertido e levará à exclusão de todos os meus posts</label>
+        		</div>
 
+        		<br>
+        		
+        		<div class="col-md-3 offset-md-3">	
+	        		<input type="submit" name="sim" class="btn btn-primary" value="Sim">
+	        	</div>
+	        			
+    		</div>
+    	</form>
+    	<form method="post" action="sobremim.php">
+    		<div class="col-md-3 offset-md-3">
+    			<input type="submit" name="nao" class="btn btn-primary" value="Não">
+	    	</div>
+    	</form>
+	</div>
 </body>
 </html>

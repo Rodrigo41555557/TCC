@@ -19,7 +19,7 @@ require 'config.php';
         if($senha != $confSenha){
             $errMsg = "Senha Incorreta";
            	echo $errMsg;
-           	echo '<meta http-equiv="refresh" content="3;url=editar_user.php">';
+           	header('Location: editar_user.php?action=senhaincorreta'); 
            	die();
         }elseif (!is_numeric($telefone)) {
         	echo "escreva um numero de telefone válido";
@@ -27,9 +27,9 @@ require 'config.php';
         	die();
         }
 
-/*        var_dump(is_numeric($telefone));
+        var_dump(is_numeric($telefone));
         echo "nickname: ".$apelido."\n";
-?><br><?php  
+?><br><?php   
  		echo "nome: ".$nome."\n";        
 ?><br><?php        
         echo "senha: ".$senha."\n";
@@ -38,7 +38,7 @@ require 'config.php';
 ?><br><?php
         echo "tel: ".$telefone."\n";
 ?><br><?php
-*/
+
 		if($errMsg == '') {
 			try {
 				$sql = "UPDATE usuario SET nome_completo = :nome_completo, senha = :senha, telefone = :telefone, apelido = :apelido WHERE `usuario`.`cod_usuario` = ".$_SESSION['id'].";";
@@ -56,11 +56,7 @@ require 'config.php';
 			}
 		}
 		echo $errMsg;
-		//dados da session recebem os dados alterados
-		$_SESSION['name'] = $nome;
-		$_SESSION['apelido'] = $apelido;
-		$_SESSION['senha'] = $senha; 
-		$_SESSION['telefone'] = $telefone;
+    	
     }
  		//ver os dados saindo do form e printando na tela 
  		
