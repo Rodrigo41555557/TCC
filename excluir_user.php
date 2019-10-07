@@ -38,9 +38,11 @@ require 'config.php';
     		</div>
     	</form>
     	<form method="post" action="sobremim.php">
-    		<div class="col-md-3 offset-md-3">
-    			<input type="submit" name="nao" class="btn btn-primary" value="Não">
-	    	</div>
+            <div class="form-group">
+    		    <div class="col-md-3 offset-md-3">
+    			    <input type="submit" name="nao" class="btn btn-primary" value="Não">
+	    	    </div>
+            </div>
     	</form>
 	</div>
 </body>

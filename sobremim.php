@@ -35,7 +35,7 @@
 			</li>
 			
 			<li class="list-group-item">
-				<a class="nav-link text-danger" href="excluir_user.php" >Excluir Usuário</a>
+				<a class="nav-link text-danger" href="excluir_user.php" id="excluir">Excluir Usuário</a>
 			</li>
 
         </div>
