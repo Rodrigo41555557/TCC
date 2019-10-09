@@ -70,7 +70,7 @@
             <div class="col-md-6 offset-md-3">
                 <label> Escreva sua sugestão </label>  
                 <div>
-                <input type="text" class="form-control" name="texto_sugestao" rows="5" placeholder="Escreva sua Sugestão" required=""></input>
+                <textarea type="textarea" class="form-control" name="texto_sugestao" rows="10" cols="70" placeholder="Escreva sua Sugestão" required=""></textarea>
             </div>
         </div> 
         <br>
@@ -81,7 +81,7 @@
         </div>
 
     </form> 
-	
+	<br><br><br><br>
 </div>
 </div>
 <?php include 'rodape.php'; ?>	

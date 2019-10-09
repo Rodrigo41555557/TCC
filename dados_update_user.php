@@ -6,7 +6,7 @@ require 'config.php';
 	}else{
 
     	if(isset($_POST['save'])) {
-    		$errMsg = '';   
+    		
     	}
 
     	// Pegando info do FORM de alterar usuário
@@ -29,7 +29,7 @@ require 'config.php';
 
         //altera em tempo real
         $_SESSION['apelido'] = $_POST['apelido'];
-        $_SESSION['nome'] = $_POST['nome_completo'];
+        $_SESSION['name'] = $_POST['nome_completo'];
         $_SESSION['senha'] = $_POST['senha'];
         $_SESSION['confSenha'] = $_POST['confsenha'];
         $_SESSION['telefone'] = $_POST['telefone'];
@@ -45,7 +45,7 @@ require 'config.php';
                 ':telefone' => $telefone,
                 ':apelido' => $apelido
               	));
-        		$_POST['alterado'] = 'Usuário alterado com sucesso';
+        		$_POST['alter'] = 'Usuário alterado com sucesso';
               	header('Location: sobremim.php?action=alterado');
 			} catch (PDOException $e) {
                 $errMsg = $e->getMessage();

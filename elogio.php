@@ -75,7 +75,7 @@
             <div class="col-md-6 offset-md-3">
                 <label> Escreva seu Elogio </label>  
                 <div>
-                <input type="text" class="form-control" name="texto_elogio" rows="5" placeholder="Escreva seu Elogio" required=""></input>
+                <textarea type="textarea" class="form-control" name="texto_elogio" rows="10" cols="70" placeholder="Escreva seu Elogio" required=""></textarea>
             </div>
         </div> 
 
@@ -88,6 +88,8 @@
         </div>
 
     </form> 
+
+    <br><br><br><br>
 	
 	</div>
 </div>

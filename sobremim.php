@@ -20,8 +20,9 @@
 
 	<br><br><br>
     <?php 
-        if(isset($_POST['alterado'])) {
-            echo '<div class="col-md-6 offset-md-3"><h5 class="text-danger text-center">'.$_POST['alterado'].'</h5></div>';
+    	$errMsg = 'usuário alterado com sucesso';   
+        if(isset($_POST['alter'])) {
+            echo '<div class="col-md-6 offset-md-3"><h5 class="text-danger text-center"> '.$errMsg.' </h5></div>';
         }
     ?>
     <div id="showuser" class="row">
@@ -35,7 +36,7 @@
 			</li>
 			
 			<li class="list-group-item">
-				<a class="nav-link text-danger" href="excluir_user.php" >Excluir Usuário</a>
+				<a class="nav-link text-danger" href="excluir_user.php" onclick="">Excluir Usuário</a>
 			</li>
 
         </div>

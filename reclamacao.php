@@ -71,7 +71,7 @@
             <div class="col-md-6 offset-md-3">
                 <label> Escreva sua Reclamação </label>  
                 <div>
-                <input type="text" class="form-control" name="texto_reclamacao" rows="5" placeholder="Escreva sua Reclamação" required="" >
+                <textarea type="textarea" class="form-control" name="texto_reclamacao" rows="10" cols="70" placeholder="Escreva sua Reclamação" required=""></textarea>
             </input>
             </div>
         </div> 
@@ -83,7 +83,7 @@
         </div>
 
     </form> 
-    
+    <br><br><br><br>
 </div>
 </div>
 
