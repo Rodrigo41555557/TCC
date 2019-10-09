@@ -27,17 +27,13 @@ require 'config.php';
         	die();
         }
 
-        var_dump(is_numeric($telefone));
-        echo "nickname: ".$apelido."\n";
-?><br><?php   
- 		echo "nome: ".$nome."\n";        
-?><br><?php        
-        echo "senha: ".$senha."\n";
-?><br><?php        
-        echo "senha confirmada: ".$confSenha."\n";
-?><br><?php
-        echo "tel: ".$telefone."\n";
-?><br><?php
+        //altera em tempo real
+        $_SESSION['apelido'] = $_POST['apelido'];
+        $_SESSION['nome'] = $_POST['nome_completo'];
+        $_SESSION['senha'] = $_POST['senha'];
+        $_SESSION['confSenha'] = $_POST['confsenha'];
+        $_SESSION['telefone'] = $_POST['telefone'];
+
 
 		if($errMsg == '') {
 			try {
