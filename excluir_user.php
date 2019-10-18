@@ -37,9 +37,9 @@ require 'config.php';
 	        			
     		</div>
     	</form>
-    	<form method="post" action="sobremim.php">
-    		<div class="col-md-3 offset-md-3">
-    			<input type="submit" name="nao" class="btn btn-primary" value="Não">
+    	<form method="post" action="sobremim.php" class="col-md-3 offset-md-3">
+    		<div class="col-md-3 ">
+    			<input type="submit" name="nao" class="btn btn-primary" value="Voltar ao Menu do Usuário">
 	    	</div>
     	</form>
 	</div>
