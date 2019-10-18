@@ -1,15 +1,14 @@
 <?php
 if($errMsg == ''){
 
-		$id = $_SESSION['id'];
-		if (isset($_POST['sim'])) {
-			try {
-				 $sql = "DELETE FROM usuario WHERE id = ".$_SESSION['id'];        
-				 $q = $connect->prepare($sql);
+	$id = $_SESSION['id'];
+		
+	$sql = "DELETE FROM `usuario` WHERE `usuario`.`cod_usuario` = $id";        
+	$q = $connect->prepare($sql) or die(mysql_error());
 
 				 $response = $q->execute(array($id));  
 				 session_destroy();
 				 header('Location: login.php?action=deletado');    
-			}
+
 	}
 ?>	
