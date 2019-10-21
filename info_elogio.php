@@ -1,11 +1,12 @@
 <?php
 require 'config.php';
 
-	$sql = "SELECT texto_elogio, titulo FROM `elogio`";
+	$sql = "SELECT cod_elogio, texto_elogio, titulo FROM `elogio`";
 	$stmt = $connect->prepare($sql);  
 	$stmt->execute(array(
-        $_POST['texto_elogio'] = `texto_elogio`,
-        $_POST['titulo'] = `titulo`
+        $cod_elogio = `:cod_elogio`,
+        $_POST['texto_elogio'] = `:texto_elogio`,
+        $_POST['titulo'] = `:titulo`
     ));
 	
 
@@ -31,16 +32,18 @@ require 'config.php';
 
 	<div id="showuser" class="row">
 
-		
+<?php   foreach ($cod_elogio as $elogio) {
+
+                   ?>
         <div class="col-sm-4 mb-5">
-        	<li class="list-group-item">Quem Escreveu: jao</li>
+        	<li class="list-group-item">Quem Escreveu: <?= $cod_elogio; ?></li>
 
             <li class="list-group-item">Assunto:  <?= $_POST['titulo'] ?></li>
             <li class="list-group-item"><?= $_POST['texto_elogio'] ?></li>
 
 			
         </div>
-
+<?php   }   ?>
     </div>
 
 </div>

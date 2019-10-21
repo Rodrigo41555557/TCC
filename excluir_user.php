@@ -17,7 +17,7 @@ require 'config.php';
 <?php require_once 'menu.php'; ?>	
 <br><br><br>
 	<div class="container">
-		<form method="post" action="sobremim.php">
+		<form method="post" action="conf_excluir_user.php">
 			<div class="form-group">
         		<div class="col-md-6 offset-md-3">
 	        		<h3 class="text-center"> Você tem certeza que deseja excluír sua conta? </h3>
