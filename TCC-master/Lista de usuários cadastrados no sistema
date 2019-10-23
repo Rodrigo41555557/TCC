@@ -1,0 +1,10 @@
++-------------+----------------+---------------+-------------+-----------+
+| cod_usuario | nome_completo  | apelido       | senha       | telefone  |
++-------------+----------------+---------------+-------------+-----------+
+|           1 | Bruno Henrique | bruno         | steverogers | 912121212 |
+|           2 | Rodrigo Renato | rodrigo121    | rodrigo121  | 912121212 |
+|           3 | Jango Jepaque  | jpac123       | joao        | 966612469 |
+|           4 | Wike Kamian    | Homem1        | homem       | 999999999 |
+|           5 | juniiiorr      | Julinho da ak | julio       | 999887452 |
++-------------+----------------+---------------+-------------+-----------+
+
