@@ -51,11 +51,12 @@ FOREIGN KEY(rec_cod_usuario) REFERENCES usuario (cod_usuario)
 );
 
 INSERT INTO `usuario` (`nome_completo`, `apelido`, `senha`, `telefone`) VALUES
-( 'Bruno Henrique', 'bruno', 'steverogers', 912121212),
-( 'Rodrigo Renato', 'rodrigo121', 'rodrigo121', 912121212),
-( 'Jango Jepaque', 'jpac123', 'joao', 966612469),
-( 'Wike Kamian', 'Homem1', 'homem', 999999999),
-('juniiiorr', 'Julinho da ak', 'julio', '999887452');
+('Bruno Henrique', 'bruno', 'steverogers', '912121212'), 
+('Jao', 'Joao', 'remo', '912344567'), 
+('Kallian Linke', 'Homem', 'link', '911111111'), 
+('Zherdev Arseniy Denisovich', 'Julinho da ak', 'julio', '999887452'), 
+('Sildreski da Ilvigo', 'Sildreski', 'homem', '935647263'), 
+('Tatarintseva Luiza Pavlovna', 'teste2', 'err', '923232323')
 
 INSERT INTO `adm` (`nome_adm`, `senha`) VALUES
 ( 'Admnistrador', 'administrador');
