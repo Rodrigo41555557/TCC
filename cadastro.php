@@ -27,6 +27,7 @@ if(isset($_POST['register'])) {
                 ':senha' => $senha,
                 ':telefone' => $telefone
             ));
+            $_POST['criado'] = 'Usuario criado com sucesso';
             header('Location: login.php?action=entrou');
             exit;
         }
@@ -36,9 +37,6 @@ if(isset($_POST['register'])) {
     }
 }
 
-if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
-    $errMsg = 'Usuário registrado com sucesso! agora você pode <a href="login.php">logar</a>';
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">

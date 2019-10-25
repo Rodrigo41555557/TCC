@@ -1,13 +1,28 @@
 <?php
-if($errMsg == ''){
+require 'config.php';
 
-	$id = $_SESSION['id'];				 
+if(empty($_SESSION['id'])){
+	header('Location: login.php');
+}else{
 
-	$sql = "DELETE FROM `usuario` WHERE `usuario`.`cod_usuario` = $id";  
-	$q = $connect->prepare($sql);
-	$response = $q->execute(array($id)); 
+	if(isset($_POST['save'])) {
+    		
+	}
 
-	session_destroy();
-	header('Location: login.php?action=deletado');   
+	$id = $_SESSION['id']; 
+	if($errMsg == '') {   
+		try {
+
+	  		$stmt = $connect->prepare('DELETE FROM usuario WHERE cod_usuario = :id');
+	  		$stmt->bindParam(':id', $id); 
+			$stmt->execute();
+			$_POST['del'] = 'Usuário apagado com sucesso';
+			session_destroy();
+	  		header('Location: login.php?action=deletado');  
+		} catch(PDOException $e) {
+			$errMsg = $e->getMessage();
+		}
+	}
+	echo $errMsg;
 }
 ?>	

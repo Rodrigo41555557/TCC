@@ -74,9 +74,7 @@
 	    </div>
     </div>
     <?php 
-    	if(isset($errMsg)) {
-    		echo $errMsg;
-    	}
+    	require 'issetdump.php';
     ?>
 
         <div class="form-group">
