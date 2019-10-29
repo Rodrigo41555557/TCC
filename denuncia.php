@@ -7,20 +7,21 @@
         // Get data from FROM
         $texto_denuncia = $_POST['texto_denuncia'];
         $titulo = $_POST['titulo'];
+        $userdenuncia = $_SESSION['id'];
         //provisorio
         $nome = $_POST['cod_usuario'];
     
 			if($texto_denuncia == '')
 				$errMsg = 'Escreva sua denuncia';
 			if($titulo == '')
-
 				$errMsg = 'Escreva o título do sua denuncia';
 			if($errMsg == ''){
 				try {
-					$stmt = $connect->prepare('INSERT INTO denuncia (texto_denuncia, titulo) VALUES (:texto_denuncia, :titulo)');
+					$stmt = $connect->prepare('INSERT INTO denuncia (texto_denuncia, titulo, den_cod_usuario) VALUES (:texto_denuncia, :titulo, :den_cod_usuario)');
 					$stmt->execute(array(
 						':texto_denuncia' => $texto_denuncia,
-						':titulo' => $titulo
+                        ':titulo' => $titulo,
+                        ':den_cod_usuario' => $userdenuncia
 					));
 					header('Location: denuncia.php?action=enviou');
 					exit;

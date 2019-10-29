@@ -7,6 +7,7 @@
         // Get data from FROM
         $texto_sugestao = $_POST['texto_sugestao'];
         $titulo = $_POST['titulo'];
+        $usersugestao = $_SESSION['id'];
         //provisorio
         $nome = $_POST['cod_usuario'];
     
@@ -16,10 +17,11 @@
 				$errMsg = 'Escreva o título do sua sugestao';
 			if($errMsg == ''){
 				try {
-					$stmt = $connect->prepare('INSERT INTO sugestao (texto_sugestao, titulo) VALUES (:texto_sugestao, :titulo)');
+					$stmt = $connect->prepare('INSERT INTO sugestao (texto_sugestao, titulo, sug_cod_usuario) VALUES (:texto_sugestao, :titulo, :sug_cod_usuario)');
 					$stmt->execute(array(
 						':texto_sugestao' => $texto_sugestao,
-						':titulo' => $titulo
+                        ':titulo' => $titulo,
+                        ':sug_cod_usuario' => $usersugestao
 					));
 					header('Location: sugestao.php?action=enviou');
 					exit;

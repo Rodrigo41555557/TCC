@@ -7,6 +7,7 @@
         // Get data from FROM
         $texto_reclamacao = $_POST['texto_reclamacao'];
         $titulo = $_POST['titulo'];
+        $userreclamacao = $_SESSION['id'];
         //provisorio
         $nome = $_POST['cod_usuario'];
     
@@ -16,10 +17,11 @@
                 $errMsg = 'Escreva o título do sua reclamacao';
             if($errMsg == ''){
                 try {
-                    $stmt = $connect->prepare('INSERT INTO reclamacao (texto_reclamacao, titulo) VALUES (:texto_reclamacao, :titulo)');
+                    $stmt = $connect->prepare('INSERT INTO reclamacao (texto_reclamacao, titulo, rec_cod_usuario) VALUES (:texto_reclamacao, :titulo, :rec_cod_usuario)');
                     $stmt->execute(array(
                         ':texto_reclamacao' => $texto_reclamacao,
-                        ':titulo' => $titulo
+                        ':titulo' => $titulo,
+                        ':rec_cod_usuario' => $userreclamacao
                     ));
                     header('Location: reclamacao.php?action=enviou');
                     exit;
@@ -29,7 +31,6 @@
                 }
             }
     }
-    
 
     if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
         $errMsg = 'Reclamação enviada com sucesso';

@@ -22,32 +22,28 @@ CREATE TABLE `elogio` (
 cod_elogio int(5) PRIMARY KEY NOT NULL AUTO_INCREMENT,
 texto_elogio varchar(500) NOT NULL,
 titulo varchar(50) NOT NULL,
-elo_cod_usuario int(5),
-FOREIGN KEY (elo_cod_usuario) REFERENCES usuario (cod_usuario)
+elo_cod_usuario int(5) NOT NULL
 );
 
 CREATE TABLE `denuncia` (
 cod_denuncia int(5) PRIMARY KEY NOT NULL AUTO_INCREMENT,
 texto_denuncia varchar(500) NOT NULL,
 titulo varchar(50) NOT NULL,
-den_cod_usuario int(5),
-FOREIGN KEY(den_cod_usuario) REFERENCES usuario (cod_usuario)
+den_cod_usuario int(5) NOT NULL
 );
 
 CREATE TABLE `sugestao` (
 cod_sugestao int(5) PRIMARY KEY NOT NULL AUTO_INCREMENT,
 texto_sugestao varchar(500) NOT NULL,
 titulo varchar(50) NOT NULL,
-sug_cod_usuario int(5),
-FOREIGN KEY(sug_cod_usuario) REFERENCES usuario (cod_usuario)
+sug_cod_usuario int(5) NOT NULL
 );
 
 CREATE TABLE `reclamacao` (
 cod_reclamacao int(5) PRIMARY KEY NOT NULL AUTO_INCREMENT,
 texto_reclamacao varchar(500) NOT NULL,
 titulo varchar(50) NOT NULL,
-rec_cod_usuario int(5),
-FOREIGN KEY(rec_cod_usuario) REFERENCES usuario (cod_usuario)
+rec_cod_usuario int(5) NOT NULL
 );
 
 INSERT INTO `usuario` (`nome_completo`, `apelido`, `senha`, `telefone`) VALUES
@@ -56,10 +52,14 @@ INSERT INTO `usuario` (`nome_completo`, `apelido`, `senha`, `telefone`) VALUES
 ('Kallian Linke', 'Homem', 'link', '911111111'), 
 ('Zherdev Arseniy Denisovich', 'Julinho da ak', 'julio', '999887452'), 
 ('Sildreski da Ilvigo', 'Sildreski', 'homem', '935647263'), 
-('Tatarintseva Luiza Pavlovna', 'teste2', 'err', '923232323')
+('Tatarintseva Luiza Pavlovna', 'teste2', 'err', '923232323'),
+('juniiiorr', 'Julinho da ak', 'julio', '999887452'), 
+('teste2', 'teste2', 'err', '923232323');
 
 INSERT INTO `adm` (`nome_adm`, `senha`) VALUES
 ( 'Admnistrador', 'administrador');
 
-INSERT INTO `elogio` (`texto_elogio`, `titulo`) VALUES
-( 'sees, soos, sees, soos, soos, sees', 'sees ou soos');
+INSERT INTO `elogio` (`texto_elogio`, `titulo`, `elo_cod_usuario`) VALUES
+( 'sees, soos, sees, soos, soos, sees', 'sees ou soos', 1),
+('OI, MAS QUE BELO LUGAR', 'Ola ', '4'), 
+('okokokokoko', 'aaa', '4');

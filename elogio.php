@@ -7,6 +7,7 @@
         // Get data from FROM
         $texto_elogio = $_POST['texto_elogio'];
         $titulo = $_POST['titulo'];
+        $userelogio = $_SESSION['id'];
         //provisorio
         $nome = $_POST['cod_usuario'];
     
@@ -16,10 +17,11 @@
 				$errMsg = 'Escreva o título do seu elogio';
 			if($errMsg == ''){
 				try {
-					$stmt = $connect->prepare('INSERT INTO elogio (texto_elogio, titulo) VALUES (:texto_elogio, :titulo)');
+					$stmt = $connect->prepare('INSERT INTO elogio (texto_elogio, titulo, elo_cod_usuario) VALUES (:texto_elogio, :titulo, :elo_cod_usuario)');
 					$stmt->execute(array(
 						':texto_elogio' => $texto_elogio,
-						':titulo' => $titulo
+						':titulo' => $titulo,
+						':elo_cod_usuario' => $userelogio
 					));
 					header('Location: elogio.php?action=enviou');
 					exit;
