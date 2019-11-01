@@ -60,15 +60,15 @@ require 'config.php';
             </div>
 
         </div>
+        <br>
+        <div id="opcoes" class="row">
 
-        <div id="jogos" class="row">
-
-			<div id="resenha" class="col-sm-3 mb-5">
+			<div class="col-sm-3 mb-5">
                    <article class="bg-dark"></article>
             </div>
 
             
-            <div id="resenha" class="col-sm-2 mb-4">
+            <div class="col-sm-2 mb-4">
                 <div  class="card">
                     <a href="reclamacao.php"><img class="card-img elemento " src="img/reclamacao.jpg" height="150px" ></a>
                 </div>
@@ -77,11 +77,11 @@ require 'config.php';
                 </div>
             </div>
 
-            <div id="resenha" class="col-sm-2 mb-5">
+            <div class="col-sm-2 mb-5">
                    <article class="bg-dark"></article>
             </div>
 
-            <div id="resenha" class="col-sm-2 mb-4">
+            <div class="col-sm-2 mb-4">
                 <div  class="card">
                     <a href="denuncia.php"><img class="card-img elemento" src="img/denuncia.jpg" height="150px" ></a>
                 </div>
@@ -90,7 +90,7 @@ require 'config.php';
                 </div>
             </div>
         
-            <div id="resenha" class="col-sm-2 mb-5">
+            <div class="col-sm-2 mb-5">
                    <article class="bg-dark"></article>
             </div>
         </div>

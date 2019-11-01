@@ -1,6 +1,7 @@
 <?php
 require 'config.php';
 
+    $sql2 = "SELECT cod_usuario, nome_completo, apelido FROM `usuario`";
 	$sql = "SELECT cod_elogio, texto_elogio, titulo FROM `elogio`";
 	$stmt = $connect->prepare($sql);  
 	$stmt->execute(array(
@@ -36,7 +37,7 @@ require 'config.php';
 
                    ?>
         <div class="col-sm-4 mb-5">
-        	<li class="list-group-item">Quem Escreveu: <?= $cod_elogio; ?></li>
+        	<li class="list-group-item">Quem Escreveu: <?= $elogio; ?></li>
 
             <li class="list-group-item">Assunto:  <?= $_POST['titulo'] ?></li>
             <li class="list-group-item"><?= $_POST['texto_elogio'] ?></li>
