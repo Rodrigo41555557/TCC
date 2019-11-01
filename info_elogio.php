@@ -1,15 +1,7 @@
 <?php
 require 'config.php';
 
-    $sql2 = "SELECT cod_usuario, nome_completo, apelido FROM `usuario`";
-	$sql = "SELECT cod_elogio, texto_elogio, titulo FROM `elogio`";
-	$stmt = $connect->prepare($sql);  
-	$stmt->execute(array(
-        $cod_elogio = `:cod_elogio`,
-        $_POST['texto_elogio'] = `:texto_elogio`,
-        $_POST['titulo'] = `:titulo`
-    ));
-	
+    
 
 ?>
 <!DOCTYPE html>
@@ -29,22 +21,50 @@ require 'config.php';
 
 <div class="container">
 
-		<h1 class="text-center text-dark">Em construção</h1>
+		<h1 class="text-center text-dark">Elogios Cadastrados no Site</h1>
 
 	<div id="showuser" class="row">
 
-<?php   foreach ($cod_elogio as $elogio) {
 
-                   ?>
         <div class="col-sm-4 mb-5">
-        	<li class="list-group-item">Quem Escreveu: <?= $elogio; ?></li>
 
-            <li class="list-group-item">Assunto:  <?= $_POST['titulo'] ?></li>
-            <li class="list-group-item"><?= $_POST['texto_elogio'] ?></li>
+ <?php   
+            $linhauser = array(); $linhaelo = array();
+
+            $user = $connect->query("SELECT cod_usuario, apelido FROM `usuario`");
+
+            $elogio = $connect->query("SELECT cod_elogio, texto_elogio, titulo, elo_cod_usuario FROM `elogio`");
+            
+            $linhaelo[] = $elogio->fetch(PDO::FETCH_ASSOC);
+            $linhauser[] = $user->fetch(PDO::FETCH_ASSOC);
+
+            if ($linhauser['cod_usuario'] == $linhaelo['elo_cod_usuario'] ) {
+                echo "<li class="."list-group-item".">Quem Escreveu: {$linhauser['apelido']}</li>";
+            }
+   
+        /*
+        $x = $connect->query("SELECT x, y FROM z;");
+   
+        while ($linha = $x->fetch(PDO::FETCH_ASSOC)) {
+        echo "x: {$linha['x']} - y: {$linha['y']}<br />";
+}
+        */        
+                    
+                //    echo "<li class="."list-group-item".">Assunto:  {$linhaelo['titulo']}</li>";
+                
+            
+            
+            
+                 // {$linha['cod_elogio']} - {$linha['texto_elogio']} -  - {$linha['elo_cod_usuario']}<br />";
+
+?>
+        	
+
+            
+            <li class="list-group-item"><?= $_POST['texto_elogio']; ?></li>
 
 			
         </div>
-<?php   }   ?>
     </div>
 
 </div>
