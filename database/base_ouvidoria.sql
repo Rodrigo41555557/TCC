@@ -52,7 +52,7 @@ INSERT INTO `usuario` (`nome_completo`, `apelido`, `senha`, `telefone`) VALUES
 ('Kallian Linke', 'Homem', 'link', '911111111'), 
 ('Zherdev Arseniy Denisovich', 'Julinho da ak', 'julio', '999887452'), 
 ('Sildreski da Ilvigo', 'Sildreski', 'homem', '935647263'), 
-('Tatarintseva Luiza Pavlovna', 'teste2', 'err', '923232323'),
+('Tatarintseva Luiza Pavlovna', 'teste2', 'erro', '923232323'),
 ('juniiiorr', 'Julinho da ak', 'julio', '999887452'), 
 ('teste2', 'teste2', 'err', '923232323');
 

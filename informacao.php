@@ -33,50 +33,45 @@
             
         
 
-        <div class="form-group row d-flex justify-content-center">
+        <div class="form-group row d-flex mx-auto">
 
-            <div id="info_elogio" class="col-sm-2 mb-1">
+
+            <div id="info_elogio" class="col-sm-3 mb-1">
                 <div  class="card">
                     <a href="info_elogio.php"><img class="card-img elemento" src="img/elogio.jpg" height="150px"></a>
                 </div>
                 <div class="titulo">
-                    Elogio
+                    Elogios
                 </div>
-            </div>
-            <div class="col-sm-1 mb-1">
-                   <article class="bg-dark"></article>
             </div>
 
-            <div id="info_sugestao" class="col-sm-2 mb-1">
+
+            <div id="info_sugestao" class="col-sm-3 mb-1">
                 <div  class="card">
-                    <a href="sugestao.php"><img class="card-img elemento" src="img/sugestao.jpg" height="150px" ></a>
+                    <a href="info_sugestao.php"><img class="card-img elemento" src="img/sugestao.jpg" height="150px" ></a>
                 </div>
                 <div class="titulo">
-                    Sugestão
+                    Sugestões
                 </div>
-            </div>
-            <div class="col-sm-1 mb-1">
-                   <article class="bg-dark"></article>
             </div>
 
-            <div id="info_reclamacao" class="col-sm-2 mb-1">
+
+            <div id="info_reclamacao" class="col-sm-3 mb-1">
                 <div  class="card">
-                    <a href="reclamacao.php"><img class="card-img elemento" src="img/reclamacao.jpg" height="150px" ></a>
+                    <a href="info_reclamacao.php"><img class="card-img elemento" src="img/reclamacao.jpg" height="150px" ></a>
                 </div>
                 <div class="titulo">
-                    Reclamação
+                    Reclamações
                 </div>
-            </div>
-            <div class="col-sm-1 mb-1">
-                   <article class="bg-dark"></article>
             </div>
 
-            <div id="info_denuncia" class="col-sm-2 mb-1">
+
+            <div id="info_denuncia" class="col-sm-3 mb-1">
                 <div  class="card">
-                    <a href="denuncia.php"><img class="card-img elemento" src="img/denuncia.jpg" height="150px" ></a>
+                    <a href="info_denuncia.php"><img class="card-img elemento" src="img/denuncia.jpg" height="150px" ></a>
                 </div>
                 <div class="titulo">
-                    Denúncia
+                    Denúncias
                 </div>
             </div>
 
