@@ -27,32 +27,33 @@ require 'config.php';
 
  <?php   
             
-            $user = $connect->query("SELECT cod_usuario, apelido FROM `usuario`");
+    $elogio = $connect->query("SELECT `elogio`.`elo_cod_usuario`, `usuario`.`apelido`, `usuario`.`cod_usuario` FROM `usuario` INNER JOIN `usuario` ON `elogio`.`elo_cod_usuario`=`elogio`.`elo_cod_usuario`");
+    //Nessa query sera buscado tudo na tabela usuario que tenham um ID igual a um elo_cod_usuario da tabela elogio
             
-
-            $elogio = $connect->query("SELECT cod_elogio, titulo, elo_cod_usuario FROM `elogio`");
-            
-            while($linhaelo = $elogio->fetch(PDO::FETCH_ASSOC)){
-                $codelo = $linhaelo['cod_elogio'];
+    $buscar->execute($elogio); // Executa a busca
+//     \/ Retorna o resultado como array associativo \/
+    while ($linha = $buscar->fetchAll(PDO::FETCH_ASSOC)){ // Inicia o loop para pegar todos os dados
+    echo " {$resultado['elo_cod_usuario']} ";
+    echo " {$resultado['titulo']} ";
+    echo " {$resultado['apelido']} ";        
+    }
+    
+    
+    
+/*    while($line = $elogio->fetch(PDO::FETCH_ASSOC)){
+            echo "Elogio: {$line['titulo']} - Criador: {$line['apelido']}";
+                $codelo = $line['cod_elogio'];
                 $tituloelo = $linhaelo['titulo'];
                 $elousercod = $linhaelo['elo_cod_usuario'];  
                 print_r($codelo."\n".$elousercod."\n".$tituloelo);
                 echo "<br /><br />";
             }
             echo "<br /><br /><br />";
+*/
 
-            while($linhauser = $user->fetch(PDO::FETCH_ASSOC)){
-                $coduser = $linhauser['cod_usuario'];
-                
-                $nameuser = $linhauser['apelido'];      
-                print_r($coduser."\n".$nameuser);
-                
-                echo "<br /><br />";
-            }          
-            
          
-?>            <li class="list-group-item">Quem Escreveu: <?= $linhauser['apelido']; ?> </li> 
-              <li class="list-group-item">Assunto: <?= $linhauser['titulo']; ?> </li> <?php      
+?>            <li class="list-group-item">Quem Escreveu: <?= $line['apelido']; ?> </li> 
+              <li class="list-group-item">Assunto: <?= $line['titulo']; ?> </li> <?php      
              
      
 /*      $x = $connect->query("SELECT x, y FROM z;");
