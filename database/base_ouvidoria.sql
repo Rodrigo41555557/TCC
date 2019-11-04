@@ -10,6 +10,7 @@ nome_completo varchar(150) NOT NULL,
 apelido varchar(50) NOT NULL,
 senha varchar(150) NOT NULL,
 telefone int(33) NOT NULL
+cod_
 );
 
 CREATE TABLE `adm` (
