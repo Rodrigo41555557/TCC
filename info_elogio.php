@@ -27,9 +27,8 @@ require 'config.php';
 
  <?php   
             
-    $elogio = $connect->query("SELECT `elogio`.`elo_cod_usuario`, `usuario`.`apelido`, `usuario`.`cod_usuario` FROM `usuario` INNER JOIN `usuario` ON `elogio`.`elo_cod_usuario`=`elogio`.`elo_cod_usuario`");
+    $elogio = $connect->query("SELECT marido.nome AS Marido, esposa.nome AS Esposa FROM marido INNER JOIN esposa ON marido.PK = esposa.FK");
     //Nessa query sera buscado tudo na tabela usuario que tenham um ID igual a um elo_cod_usuario da tabela elogio
-            
     $buscar->execute($elogio); // Executa a busca
 //     \/ Retorna o resultado como array associativo \/
     while ($linha = $buscar->fetchAll(PDO::FETCH_ASSOC)){ // Inicia o loop para pegar todos os dados
