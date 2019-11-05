@@ -25,19 +25,18 @@ require 'config.php';
 
         <div class="col-sm-4 mb-5">
 
- <?php   
-            
-    $elogio = $connect->query("SELECT marido.nome AS Marido, esposa.nome AS Esposa FROM marido INNER JOIN esposa ON marido.PK = esposa.FK");
-    //Nessa query sera buscado tudo na tabela usuario que tenham um ID igual a um elo_cod_usuario da tabela elogio
-    $buscar->execute($elogio); // Executa a busca
-//     \/ Retorna o resultado como array associativo \/
-    while ($linha = $buscar->fetchAll(PDO::FETCH_ASSOC)){ // Inicia o loop para pegar todos os dados
-    echo " {$resultado['elo_cod_usuario']} ";
-    echo " {$resultado['titulo']} ";
-    echo " {$resultado['apelido']} ";        
-    }
-    
-    
+ <?php
+
+ $x = $connect->query("SELECT `cod_usuario`, `apelido` FROM `usuario`;");
+ while ($linha = $x->fetch(PDO::FETCH_ASSOC)) {
+     echo "codigo do usuario: {$linha['cod_usuario']} - seu nome: {$linha['apelido']}<br /> ";
+ }
+ echo "<br /> <br /> <br /> ";
+ $y = $connect->query("SELECT `cod_elogio`, `titulo`, `elo_cod_usuario` FROM `elogio`;");
+ while ($linhaelo = $y->fetch(PDO::FETCH_ASSOC)) {
+     echo "codigo do elogio: {$linhaelo['cod_elogio']} <br />  titulo: {$linhaelo['titulo']} <br />  código do usuário que escreveu: {$linhaelo['elo_cod_usuario']} <br /><br />";
+ }
+
     
 /*    while($line = $elogio->fetch(PDO::FETCH_ASSOC)){
             echo "Elogio: {$line['titulo']} - Criador: {$line['apelido']}";
@@ -48,17 +47,25 @@ require 'config.php';
                 echo "<br /><br />";
             }
             echo "<br /><br /><br />";
-*/
+
 
          
 ?>            <li class="list-group-item">Quem Escreveu: <?= $line['apelido']; ?> </li> 
               <li class="list-group-item">Assunto: <?= $line['titulo']; ?> </li> <?php      
              
-     
-/*      $x = $connect->query("SELECT x, y FROM z;");
-        while ($linha = $x->fetch(PDO::FETCH_ASSOC)) {
-            echo "x: {$linha['x']} - y: {$linha['y']}<br />";
-        }                      
+ */
+/*
+  $elogio = $connect->query("SELECT marido.nome AS Marido, esposa.nome AS Esposa FROM marido INNER JOIN esposa ON marido.PK = esposa.FK");
+    //Nessa query sera buscado tudo na tabela usuario que tenham um ID igual a um elo_cod_usuario da tabela elogio
+    $elogio->execute(); // Executa a busca
+//     \/ Retorna o resultado como array associativo \/
+    while ($resultado = $elogio->fetchAll(PDO::FETCH_ASSOC)){ // Inicia o loop para pegar todos os dados
+    echo " {$resultado['elo_cod_usuario']} ";
+    echo " {$resultado['titulo']} ";
+    echo " {$resultado['apelido']} ";
+    }
+
+
         // echo "<li class="."list-group-item".">Assunto:  {$linhaelo['titulo']}</li>";           
         // {$linha['cod_elogio']} - {$linha['texto_elogio']} -  - {$linha['elo_cod_usuario']}<br />"; */ 
 ?>

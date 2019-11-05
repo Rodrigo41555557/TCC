@@ -1,5 +1,7 @@
 <?php
     require 'config.php';
+
+    w
 ?>
 <!DOCTYPE html>
 <html lang="en">
