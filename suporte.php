@@ -27,8 +27,10 @@
 		<br>
 		<h4>Programador</h4>
 		<p>Rodrigo da Silva Iaguczeski</p>
+		<br>
 		<h4>Plano de Desenvolvimento</h4>
 		<p>Willian Kamke da Silva</p>
+		<br>
 		<h4>Co-Programador</h4>
 		<p>João Pedro de Aguiar da Conceição</p>	
 		
