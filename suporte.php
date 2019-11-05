@@ -25,12 +25,12 @@
 		<br>
 		<h5>Segue emails para contato caso precise de ajuda</h5>
 		<br>
-		<h4>Scrum Master e Time Scrum</h4>
-		<p>Rodrigo: rodrigoiag797@gmail.com</p>
-		<h4>Time Scrum</h4>
-		<p>Willian: williankamkesilva@gmail.com</p>
-		<h4>Product Owne</h4>
-		<p>João: jangojpac@gmail.com</p>	
+		<h4>Programador</h4>
+		<p>Rodrigo da Silva Iaguczeski</p>
+		<h4>Plano de Desenvolvimento</h4>
+		<p>Willian Kamke da Silva</p>
+		<h4>Co-Programador</h4>
+		<p>João Pedro de Aguiar da Conceição</p>	
 		
 	</div>
 <br><br><br>
