@@ -68,8 +68,7 @@ require 'config.php';
 
         // echo "<li class="."list-group-item".">Assunto:  {$linhaelo['titulo']}</li>";           
         // {$linha['cod_elogio']} - {$linha['texto_elogio']} -  - {$linha['elo_cod_usuario']}<br />"; */ 
-?>
-        			
+?>			
         </div>
     </div>
 
