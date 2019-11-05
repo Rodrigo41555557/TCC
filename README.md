@@ -5,7 +5,7 @@
 #     1.5. Link para acesso:
     https://github.com/Rodrigo41555557/TCC.git
 # 2. Base de dados: 
-  Insira o código "base_ouvidoria.sql" presente em TCC/database. 
+  Insira o código "base_ouvidoria.sql" ou o "bd_ouvidoria_3info2.sql (recomendado pro enquanto)" presente em TCC/database. 
   (cadastro de elogio, sugestao, reclamação e denuncia adicionados)
 # 3. Contas:
   pode se utilizar qualquer uma das contas para fazer login no site, ex.: nome de usuário: homem1 senha: homem
