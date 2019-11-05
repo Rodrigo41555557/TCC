@@ -94,7 +94,7 @@ require 'config.php';
                    <article class="bg-dark"></article>
             </div>
         </div>
-
+<br><br><br>
 </div>
 <?php include 'rodape.php'; ?>     
 </body>
