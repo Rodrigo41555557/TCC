@@ -32,9 +32,9 @@ require 'config.php';
      echo "codigo do usuario: {$linha['cod_usuario']} - seu nome: {$linha['apelido']}<br /> ";
  }
  echo "<br /> <br /> <br /> ";
- $y = $connect->query("SELECT `cod_elogio`, `titulo`, `elo_cod_usuario` FROM `elogio`;");
+ $y = $connect->query("SELECT `cod_elogio`, `titulo`, `texto_elogio`, `elo_cod_usuario` FROM `elogio`;");
  while ($linhaelo = $y->fetch(PDO::FETCH_ASSOC)) {
-     echo "codigo do elogio: {$linhaelo['cod_elogio']} <br />  titulo: {$linhaelo['titulo']} <br />  código do usuário que escreveu: {$linhaelo['elo_cod_usuario']} <br /><br />";
+     echo "codigo do elogio: {$linhaelo['cod_elogio']} <br />  titulo: {$linhaelo['titulo']} <br />  código do usuário que escreveu: {$linhaelo['elo_cod_usuario']} <br /> texto: {$linhaelo['texto_elogio']} <br /><br />";
  }
 
     
