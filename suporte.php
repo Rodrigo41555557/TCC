@@ -25,9 +25,12 @@
 		<br>
 		<h5>Segue emails para contato caso precise de ajuda</h5>
 		<br>
-		<p>João: jangojpac@gmail.com</p>
+		<h4>Scrum Master e Time Scrum</h4>
 		<p>Rodrigo: rodrigoiag797@gmail.com</p>
+		<h4>Time Scrum</h4>
 		<p>Willian: williankamkesilva@gmail.com</p>
+		<h4>Product Owne</h4>
+		<p>João: jangojpac@gmail.com</p>	
 		
 	</div>
 <br><br><br>
