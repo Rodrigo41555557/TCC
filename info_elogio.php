@@ -21,20 +21,26 @@ require 'config.php';
 
 		<h1 class="text-center text-dark">Elogios Cadastrados no Site</h1>
 
-	<div id="showuser" class="row">
+	<div id="showuser" class="row ">
 
-        <div class="col-sm-4 mb-5">
-
+       
  <?php
 
- $x = $connect->query("SELECT `cod_usuario`, `apelido` FROM `usuario`;");
- while ($linha = $x->fetch(PDO::FETCH_ASSOC)) {
-     echo "codigo do usuario: {$linha['cod_usuario']} - seu nome: {$linha['apelido']}<br /> ";
- }
  echo "<br /> <br /> <br /> ";
- $y = $connect->query("SELECT `cod_elogio`, `titulo`, `texto_elogio`, `elo_cod_usuario` FROM `elogio`;");
+ $y = $connect->query("SELECT `cod_elogio`, `titulo`, `apelido` FROM `elogio`, `usuario` WHERE elogio.elo_cod_usuario = usuario.cod_usuario ;");
  while ($linhaelo = $y->fetch(PDO::FETCH_ASSOC)) {
-     echo "codigo do elogio: {$linhaelo['cod_elogio']} <br />  titulo: {$linhaelo['titulo']} <br />  código do usuário que escreveu: {$linhaelo['elo_cod_usuario']} <br /> texto: {$linhaelo['texto_elogio']} <br /><br />";
+     echo "
+        <div class='col-sm-5 mb-5'>
+            
+            <div class='card'>
+                <li class='list-group-item'>Assunto: {$linhaelo['titulo']} </li>
+                <li class='list-group-item'>Autor: {$linhaelo['apelido']}</li>
+                <li class='list-group-item' 
+            </div>
+
+        </div>
+
+        ";
  }
 
     
@@ -50,8 +56,7 @@ require 'config.php';
 
 
          
-?>            <li class="list-group-item">Quem Escreveu: <?= $line['apelido']; ?> </li> 
-              <li class="list-group-item">Assunto: <?= $line['titulo']; ?> </li> <?php      
+?>             <?php      
              
  */
 /*
