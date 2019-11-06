@@ -21,8 +21,7 @@ require 'config.php';
 
 		<h1 class="text-center text-dark">Elogios Cadastrados no Site</h1>
 
-	<div id="showuser" class="row ">
-
+	<div class="row d-flex justfy-content-center">
        
  <?php
 
@@ -30,12 +29,12 @@ require 'config.php';
  $y = $connect->query("SELECT `cod_elogio`, `titulo`, `apelido` FROM `elogio`, `usuario` WHERE elogio.elo_cod_usuario = usuario.cod_usuario ;");
  while ($linhaelo = $y->fetch(PDO::FETCH_ASSOC)) {
      echo "
-        <div class='col-sm-5 mb-5'>
+        <div class='col-sm-5 mb-5 '>
             
             <div class='card'>
                 <li class='list-group-item'>Assunto: {$linhaelo['titulo']} </li>
                 <li class='list-group-item'>Autor: {$linhaelo['apelido']}</li>
-                <li class='list-group-item'</li> 
+                <li class='list-group-item'></li> 
             </div>
 
         </div>
@@ -43,40 +42,9 @@ require 'config.php';
         ";
  }
 
-    
-/*    while($line = $elogio->fetch(PDO::FETCH_ASSOC)){
-            echo "Elogio: {$line['titulo']} - Criador: {$line['apelido']}";
-                $codelo = $line['cod_elogio'];
-                $tituloelo = $linhaelo['titulo'];
-                $elousercod = $linhaelo['elo_cod_usuario'];  
-                print_r($codelo."\n".$elousercod."\n".$tituloelo);
-                echo "<br /><br />";
-            }
-            echo "<br /><br /><br />";
-
-
-         
-?>             <?php      
-             
- */
-/*
-  $elogio = $connect->query("SELECT marido.nome AS Marido, esposa.nome AS Esposa FROM marido INNER JOIN esposa ON marido.PK = esposa.FK");
-    //Nessa query sera buscado tudo na tabela usuario que tenham um ID igual a um elo_cod_usuario da tabela elogio
-    $elogio->execute(); // Executa a busca
-//     \/ Retorna o resultado como array associativo \/
-    while ($resultado = $elogio->fetchAll(PDO::FETCH_ASSOC)){ // Inicia o loop para pegar todos os dados
-    echo " {$resultado['elo_cod_usuario']} ";
-    echo " {$resultado['titulo']} ";
-    echo " {$resultado['apelido']} ";
-    }
-
-
-        // echo "<li class="."list-group-item".">Assunto:  {$linhaelo['titulo']}</li>";           
-        // {$linha['cod_elogio']} - {$linha['texto_elogio']} -  - {$linha['elo_cod_usuario']}<br />"; */ 
 ?>			
         </div>
     </div>
-
 </div>
 
 </body>

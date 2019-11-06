@@ -1,9 +1,6 @@
 <?php
 require 'config.php';
 
-	//$stmt =  $connect->stmt_init();
-	//$stmt->prepare("SELECT texto_elogio, titulo FROM elogio");
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,8 +19,32 @@ require 'config.php';
 
 <div class="container">
 
-		<h1 class="text-center text-dark">Em construção</h1>
+		<h1 class="text-center text-dark">Reclamações Cadastradas no Site</h1>
 
+	<div class="row d-flex justfy-content-center">
+       
+ <?php
+
+ echo "<br /> <br /> <br /> ";
+ $y = $connect->query("SELECT `cod_reclamacao`, `titulo`, `apelido` FROM `reclamacao`, `usuario` WHERE reclamacao.rec_cod_usuario = usuario.cod_usuario ;");
+ while ($linhasug = $y->fetch(PDO::FETCH_ASSOC)) {
+     echo "
+        <div class='col-sm-5 mb-5 '>
+            
+            <div class='card'>
+                <li class='list-group-item'>Assunto: {$linhasug['titulo']} </li>
+                <li class='list-group-item'>Autor: {$linhasug['apelido']}</li>
+                <li class='list-group-item'></li> 
+            </div>
+
+        </div>
+
+        ";
+ }
+
+?>			
+        </div>
+    </div>
 </div>
 
 </body>
