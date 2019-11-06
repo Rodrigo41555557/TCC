@@ -35,7 +35,7 @@ require 'config.php';
             <div class='card'>
                 <li class='list-group-item'>Assunto: {$linhaelo['titulo']} </li>
                 <li class='list-group-item'>Autor: {$linhaelo['apelido']}</li>
-                <li class='list-group-item' 
+                <li class='list-group-item'</li> 
             </div>
 
         </div>
