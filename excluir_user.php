@@ -17,7 +17,7 @@ require 'config.php';
 <?php require_once 'menu.php'; ?>	
 <br><br><br>
 	<div class="container">
-		<form method="post" action="conf_excluir_user.php">
+		
 			<div class="form-group">
         		<div class="col-md-6 offset-md-3">
 	        		<h3 class="text-center"> Você tem certeza que deseja excluír sua conta? </h3>
@@ -30,18 +30,20 @@ require 'config.php';
         		</div>
 
         		<br>
-        		
-        		<div class="col-md-3 offset-md-3">	
+				
+	<div class='row mx-5 '>		
+		<form method="post" action="conf_excluir_user.php" class="mx-auto">		
+        	<div class="float-left mr-auto">	
 	        		<input type="submit" name="sim" class="btn btn-primary" value="Sim">
-	        	</div>
-	        			
+	        	
     		</div>
     	</form>
-    	<form method="post" action="sobremim.php" class="col-md-3 offset-md-3">
-    		<div class="col-md-3 ">
-    			<input type="submit" name="nao" class="btn btn-primary" value="Voltar ao Menu do Usuário">
+    	<form method="post" action="sobremim.php" class="mx-auto">
+    		<div class="float-right mr-auto">
+    			<input type="submit" name="nao" class="btn btn-primary" value="Não">
 	    	</div>
     	</form>
+ 	</li>
 	</div>
 </body>
 </html>

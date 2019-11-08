@@ -19,12 +19,7 @@
 <div class="container">    
 
 	<br><br><br>
-    <?php 
-    	$errMsg = 'usuário alterado com sucesso';   
-        if(isset($_POST['alter'])) {
-            echo '<div class="col-md-6 offset-md-3"><h5 class="text-danger text-center"> '.$errMsg.' </h5></div>';
-        }
-    ?>
+
     <div id="showuser" class="row">
 
 
