@@ -73,9 +73,7 @@
 	        <h3 class="text-center"> Login </h3>
 	    </div>
     </div>
-    <?php 
-    	require 'issetdump.php';
-    ?>
+
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
