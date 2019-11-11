@@ -94,16 +94,15 @@
                 <input type="submit" name='login' value="Login" class='submit btn btn-dark'/><br />
             </div>
         </div>
-
+		
 		<div class="form-group">
-            <div class="col-md-6 offset-md-3">
-                <a href="recuperar_senha.php">Esqueceu a senha?</a>
-            </div>
-        </div>
-
+        <div class="col-md-6 offset-md-3">
+	        <h5 class="text-left"> Não tem uma conta? </h5>
+	    </div>
+    </div>
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
-                <a href="cadastro.php">Criar um Cadastro</a>
+                <a href="cadastro.php">Crie uma</a>
             </div>
         </div>
 		
