@@ -38,7 +38,7 @@
 
             <div id="info_elogio" class="col-sm-3 mb-1">
                 <div  class="card">
-                    <a href="info_elogio.php"><img class="card-img elemento" src="img/elogio.jpg" height="150px"></a>
+                    <a href="info.php?i=elogios"><img class="card-img elemento" src="img/elogio.jpg" height="150px"></a>
                 </div>
                 <div class="titulo">
                     Elogios
@@ -48,7 +48,7 @@
 
             <div id="info_sugestao" class="col-sm-3 mb-1">
                 <div  class="card">
-                    <a href="info_sugestao.php"><img class="card-img elemento" src="img/sugestao.jpg" height="150px" ></a>
+                    <a href="info.php?i=sugestoes"><img class="card-img elemento" src="img/sugestao.jpg" height="150px" ></a>
                 </div>
                 <div class="titulo">
                     Sugestões
@@ -58,7 +58,7 @@
 
             <div id="info_reclamacao" class="col-sm-3 mb-1">
                 <div  class="card">
-                    <a href="info_reclamacao.php"><img class="card-img elemento" src="img/reclamacao.jpg" height="150px" ></a>
+                    <a href="info.php?i=reclamacoes"><img class="card-img elemento" src="img/reclamacao.jpg" height="150px" ></a>
                 </div>
                 <div class="titulo">
                     Reclamações
@@ -68,7 +68,7 @@
 
             <div id="info_denuncia" class="col-sm-3 mb-1">
                 <div  class="card">
-                    <a href="info_denuncia.php"><img class="card-img elemento" src="img/denuncia.jpg" height="150px" ></a>
+                    <a href="info.php?i=denuncias"><img class="card-img elemento" src="img/denuncia.jpg" height="150px" ></a>
                 </div>
                 <div class="titulo">
                     Denúncias

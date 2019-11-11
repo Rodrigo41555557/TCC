@@ -19,13 +19,23 @@ require 'config.php';
 
 <div class="container">
     <?php
-
+    if (isset($_GET['elogio'])) {
+    
         $y = $connect->query("SELECT `cod_elogio`, `titulo`, `texto_elogio` FROM `elogio` WHERE elogio.cod_elogio = ".$_GET['elogio'].";");
         $linhaelo = $y->fetch(PDO::FETCH_ASSOC);
         echo "<h1 class='text-center text-dark'>{$linhaelo['titulo']}</h1><br />";
         echo "<br /><br />";
         echo "<p>{$linhaelo['texto_elogio']}</p>";
         echo "<br /><br />";
+    }elseif (isset($_GET['sugestao'])) {
+        
+        $y = $connect->query("SELECT `cod_sugestao`, `titulo`, `texto_sugestao` FROM `sugestao` WHERE elogio.cod_sugestao = ".$_GET['sugestao'].";");
+        $linhasug = $y->fetch(PDO::FETCH_ASSOC);
+        echo "<h1 class='text-center text-dark'>{$linhasug['titulo']}</h1><br />";
+        echo "<br /><br />";
+        echo "<p>{$linhasug['texto_sugestao']}</p>";
+        echo "<br /><br />";
+    }
    ?>
 
 </div>

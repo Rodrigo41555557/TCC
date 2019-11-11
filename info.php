@@ -20,7 +20,7 @@ require 'config.php';
      
 <?php
 
-if (1 == 1) {
+if ($_GET['i'] == 'elogios') {
     echo "<h1 class='text-center text-dark'>Elogios Cadastrados no Site</h1><br />";
 
 if ($_GET['action'] == 'deletado') {
@@ -44,32 +44,44 @@ if ($_GET['action'] == 'deletado') {
 if ($linhaelo['elo_cod_usuario'] == $_SESSION['id']) {
         echo "          <a href='exclua.php?elogio={$linhaelo['cod_elogio']}' class='float-right md-5 btn'>Excluir</a>";
             
-}            // ?elogio={$linhaelo['cod_elogio']}'        
+}   
 
         echo "      </li>     
                 </div>
             </div>
             ";
     } 
-}elseif (condition) {
+}elseif ($_GET['i'] == 'sugestoes') {
     echo "
         <h1 class='text-center text-dark'>Sugestões Cadastradas no Site</h1>
         <div class='row d-flex justfy-content-center mb-5'>
 
         ";
-    $y = $connect->query("SELECT `cod_sugestao`, `titulo`, `apelido` FROM `sugestao`, `usuario` WHERE sugestao.sug_cod_usuario = usuario.cod_usuario ;");
+    $y = $connect->query("SELECT `cod_sugestao`, `titulo`, `apelido`, `sug_cod_usuario` FROM `sugestao`, `usuario` WHERE sugestao.sug_cod_usuario = usuario.cod_usuario ;");
     while ($linhasug = $y->fetch(PDO::FETCH_ASSOC)) {
         echo "
             <div class='col-sm-5 mb-5 '>
                 <div class='card'>
                     <li class='list-group-item'>Assunto: {$linhasug['titulo']} </li>
                     <li class='list-group-item'>Autor: {$linhasug['apelido']}</li>
-                    <li class='list-group-item'></li> 
+                    <li class='list-group-item'>
+                    <form method='post' action='mostratexto.php?sugestao={$linhasug['cod_sugestao']}'>
+                    <a href='' class='float-left md-5 '> 
+                        <input type='submit' class='float-left md-5 btn btn-link' name='Teste' value='Ler'>
+                    </a>    
+                    </form>    ";
+                //mostratexto.php
+if ($linhasug['sug_cod_usuario'] == $_SESSION['id']) {
+        echo "          <a href='exclua.php?sugestao={$linhasug['cod_sugestao']}' class='float-right md-5 btn'>Excluir</a>";
+            
+}        
+
+        echo "      </li>     
                 </div>
             </div>
             ";
     }
-}elseif (condition) {
+}elseif ($_GET['i'] == 'reclamacoes') {
     echo "
         <h1 class='text-center text-dark'>Reclamações Cadastradas no Site</h1>
         <div class='row d-flex justfy-content-center mb-5'>
@@ -87,7 +99,7 @@ if ($linhaelo['elo_cod_usuario'] == $_SESSION['id']) {
             </div>
             ";
     }
-}elseif (condition) {
+}elseif ($_GET['i'] == 'denuncias') {
     echo "
         <h1 class='text-center text-dark'>Denúncias Cadastradas no Site</h1>
         <div class='row d-flex justfy-content-center mb-5'>
