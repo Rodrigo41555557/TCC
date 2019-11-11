@@ -16,9 +16,9 @@
                 <div class="col-xs-12 col-sm-4 col-md-4">
                     <h5>Contato</h5>
                     <ul class="list-unstyled quick-links">
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i>jangojpac@gmail.com</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i>rodrigoiag797@gmail.com</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i>williankamkesilva@gmail.com</a></li>
+                        <li><a href="https://www.google.com/search?sxsrf=ACYBGNQXHnMc_JCeT0VHzlkseIfoC5Qw-Q%3A1573493264167&ei=EJrJXZv1CeXB5OUP_euJ8AI&q=gmail&oq=gmail&gs_l=psy-ab.3..0i67j0l9.921.2973..3610...1.2..0.257.776.0j4j1......0....1..gws-wiz.....10..0i71j35i362i39j35i39j0i131.TK3_kDdAdBE&ved=0ahUKEwibvcSY1-LlAhXlILkGHf11Ai4Q4dUDCAo&uact=5"><i class="fa fa-angle-double-right"></i>jangojpac@gmail.com</a></li>
+                        <li><a href="https://www.google.com/search?sxsrf=ACYBGNQXHnMc_JCeT0VHzlkseIfoC5Qw-Q%3A1573493264167&ei=EJrJXZv1CeXB5OUP_euJ8AI&q=gmail&oq=gmail&gs_l=psy-ab.3..0i67j0l9.921.2973..3610...1.2..0.257.776.0j4j1......0....1..gws-wiz.....10..0i71j35i362i39j35i39j0i131.TK3_kDdAdBE&ved=0ahUKEwibvcSY1-LlAhXlILkGHf11Ai4Q4dUDCAo&uact=5"><i class="fa fa-angle-double-right"></i>rodrigoiag797@gmail.com</a></li>
+                        <li><a href="https://www.google.com/search?sxsrf=ACYBGNQXHnMc_JCeT0VHzlkseIfoC5Qw-Q%3A1573493264167&ei=EJrJXZv1CeXB5OUP_euJ8AI&q=gmail&oq=gmail&gs_l=psy-ab.3..0i67j0l9.921.2973..3610...1.2..0.257.776.0j4j1......0....1..gws-wiz.....10..0i71j35i362i39j35i39j0i131.TK3_kDdAdBE&ved=0ahUKEwibvcSY1-LlAhXlILkGHf11Ai4Q4dUDCAo&uact=5"><i class="fa fa-angle-double-right"></i>williankamkesilva@gmail.com</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-4 col-md-4">

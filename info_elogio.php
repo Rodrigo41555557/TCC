@@ -1,6 +1,5 @@
 <?php
 require 'config.php';
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +18,7 @@ require 'config.php';
 
 <div class="container">
      
- <?php
+<?php
 
 if (1 == 1) {
     echo "<h1 class='text-center text-dark'>Elogios Cadastrados no Site</h1><br />";
@@ -36,7 +35,7 @@ if ($_GET['action'] == 'deletado') {
                     <li class='list-group-item'>Assunto: {$linhaelo['titulo']} </li>
                     <li class='list-group-item'>Autor: {$linhaelo['apelido']}</li>
                     <li class='list-group-item'>
-                    <form method='post' action='mostratexto.php'
+                    <form method='post' action='mostratexto.php?elogio={$linhaelo['cod_elogio']}'>
                     <a href='' class='float-left md-5 '> 
                         <input type='submit' class='float-left md-5 btn btn-link' name='Teste' value='Ler'>
                     </a>    
@@ -113,7 +112,7 @@ if ($linhaelo['elo_cod_usuario'] == $_SESSION['id']) {
         </div>
     </div>
 </div>
-
+<?php include 'rodape.php'; ?>     
 </body>
 </html>
 

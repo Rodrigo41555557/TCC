@@ -1,3 +1,6 @@
+<?php
+require 'config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +19,16 @@
 
 <div class="container">
     <?php
-        print_r($_POST['Ler']);
-    ?>
+
+        $y = $connect->query("SELECT `cod_elogio`, `titulo`, `texto_elogio` FROM `elogio` WHERE elogio.cod_elogio = ".$_GET['elogio'].";");
+        $linhaelo = $y->fetch(PDO::FETCH_ASSOC);
+        echo "<h1 class='text-center text-dark'>{$linhaelo['titulo']}</h1><br />";
+        echo "<br /><br />";
+        echo "<p>{$linhaelo['texto_elogio']}</p>";
+        echo "<br /><br />";
+   ?>
+
 </div>
+<?php include 'rodape.php'; ?>     
 </body>
 </html>

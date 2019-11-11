@@ -28,10 +28,10 @@
 		<h4>Programador</h4>
 		<p>Rodrigo da Silva Iaguczeski</p>
 		<br>
-		<h4>Programador Assistente</h4>
+		<h4>Programador</h4>
 		<p>João Pedro de Aguiar da Conceição</p>	
 		<br>
-		<h4>Plano de Desenvolvimento</h4>
+		<h4>Planejamento</h4>
 		<p>Willian Kamke da Silva</p>
 		
 		
