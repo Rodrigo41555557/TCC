@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5fd9f35-d3d1-46e0-8dfe-7106d886a5c9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dir.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/base_ouvidoria.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/base_ouvidoria.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/bd_ouvidoria_3info2.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/info_elogio.php" beforeDir="false" afterPath="$PROJECT_DIR$/info_elogio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/estilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/estilo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exclua.php" beforeDir="false" afterPath="$PROJECT_DIR$/exclua.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/info.php" beforeDir="false" afterPath="$PROJECT_DIR$/info.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/informacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/informacao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mostratexto.php" beforeDir="false" afterPath="$PROJECT_DIR$/mostratexto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recuperar senha" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recuperar_senha.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +31,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -51,6 +57,7 @@
       <updated>1572971529919</updated>
       <workItem from="1572971532343" duration="467000" />
       <workItem from="1572979696803" duration="647000" />
+      <workItem from="1573571734699" duration="5922000" />
     </task>
     <servers />
   </component>
