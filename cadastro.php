@@ -27,7 +27,7 @@ if(isset($_POST['register'])) {
                 ':senha' => $senha,
                 ':telefone' => $telefone
             ));
-            $_POST['criado'] = 'Usuario criado com sucesso';
+            $_POST['newuser'] = $_POST['apelido'];
             header('Location: login.php?action=entrou');
             exit;
         }

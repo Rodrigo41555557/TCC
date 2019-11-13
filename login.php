@@ -8,12 +8,21 @@
 		// Get data from FORM
 		$apelido = $_POST['apelido'];
 		$senha = $_POST['senha'];
-
-		if($apelido == '')
-			$errMsg = 'Enter apelido';
-		if($senha == '')
-			$errMsg = 'Enter senha';
-
+        $entrou = $_POST['action'];
+        $novo = $_POST['newuser'];
+		if($apelido == '') {
+            $errMsg = 'Escreva o apelido';
+        }elseif($senha == '') {
+            $errMsg = 'Escreva a senha';
+        }
+        if($_POST['action'] == "entrou"){
+            $errMsg = "
+                    
+                        <div class='col-md-6 offset-md-3'>
+                            <h5 class='text-danger text-center'> Usuario ".$novo." Cadastrado com Sucesso </h5>
+                        </div>
+                    </div>";
+        }
 		if($errMsg == '') {
 			try {
 				$stmt = $connect->prepare('SELECT cod_usuario, nome_completo, apelido, senha, telefone FROM usuario WHERE apelido = :apelido');
@@ -23,35 +32,41 @@
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);
 
 				if($data == false){
-					$errMsg = '<div class="col-md-6 offset-md-3">
-									<h5 class="text-danger text-center"> Usuário '.$apelido.' não existe! 
+					$errMsg = "
+                          <div class='form-group'>
+                              <div class='col-md-6 offset-md-3'>
+									<h5 class='text-danger text-center'> Usuário '$apelido' não existe!
 							  </h5>
-							  </div>';
+							  </div>";
 				}
 				else {
-					if($senha == $data['senha']) {
-						$_SESSION['id'] = $data['cod_usuario'];
-						$_SESSION['login'] = $_POST['login'];
-						$_SESSION['name'] = $data['nome_completo'];
-						$_SESSION['apelido'] = $data['apelido'];
-						$_SESSION['senha'] = $data['senha'];
-						$_SESSION['telefone'] = $data['telefone'];
-						
-						header('Location: index.php');
-						exit;
-					}
-					else
-						$errMsg = '
-						<div class="col-md-6 offset-md-3">
-							<h5 class="text-danger text-center"> Senha Incorreta </h5>
-						</div>';
-				}
+                    if ($senha == $data['senha']) {
+                        $_SESSION['id'] = $data['cod_usuario'];
+                        $_SESSION['login'] = $_POST['login'];
+                        $_SESSION['name'] = $data['nome_completo'];
+                        $_SESSION['apelido'] = $data['apelido'];
+                        $_SESSION['senha'] = $data['senha'];
+                        $_SESSION['telefone'] = $data['telefone'];
+
+                        header('Location: index.php');
+                        exit;
+                    }else
+                        $errMsg = "
+                    <div class='form-group'>
+						<div class='col-md-6 offset-md-3'>
+							<h5 class='text-danger text-center'> Senha Incorreta </h5>
+						</div>
+					</div>";
+                }
+
 			}
+
 			catch(PDOException $e) {
 				$errMsg = $e->getMessage();
 			}
 		}
 	}
+
 ?>
 
 <!DOCTYPE html>
@@ -73,7 +88,9 @@
 	        <h3 class="text-center"> Login </h3>
 	    </div>
     </div>
-
+    <?php
+    echo $errMsg;
+    ?>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
@@ -81,6 +98,8 @@
                 <input type="text" name="apelido" class="form-control" placeholder="Nome do Usuário" required="" autocomplete="off" >    
             </div>
         </div>
+
+
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
@@ -107,7 +126,7 @@
         </div>
 		
 </form>
-
+<br><br>
 <?php include 'rodape.php'; ?>
 </body>
 </html>

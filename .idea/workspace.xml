@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5fd9f35-d3d1-46e0-8dfe-7106d886a5c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dir.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/estilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/estilo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exclua.php" beforeDir="false" afterPath="$PROJECT_DIR$/exclua.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/info.php" beforeDir="false" afterPath="$PROJECT_DIR$/info.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/informacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/informacao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mostratexto.php" beforeDir="false" afterPath="$PROJECT_DIR$/mostratexto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recuperar senha" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recuperar_senha.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cadastro.php" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rodape.php" beforeDir="false" afterPath="$PROJECT_DIR$/rodape.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,6 +53,7 @@
       <workItem from="1572971532343" duration="467000" />
       <workItem from="1572979696803" duration="647000" />
       <workItem from="1573571734699" duration="5922000" />
+      <workItem from="1573641399801" duration="3178000" />
     </task>
     <servers />
   </component>
