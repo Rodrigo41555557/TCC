@@ -1,5 +1,38 @@
 <?php
 require 'config.php';
+
+    if (isset($_GET['action']) && $_GET['action'] == 'deletado') {
+        if ($_GET['i'] == 'elogios') {
+            $errMsg = "
+    			    <div class='form-group'>
+						<div class='col-md-6 offset-md-3'>
+							<h5 class='text-danger text-center'> Elogio Excluido com Sucesso </h5>
+						</div>
+					</div>";
+        } elseif ($_GET['i'] == 'sugestoes') {
+            $errMsg = "
+    			    <div class='form-group'>
+						<div class='col-md-6 offset-md-3'>
+							<h5 class='text-danger text-center'> Sugestão Excluída com Sucesso </h5>
+						</div>
+					</div>";
+        } elseif ($_GET['i'] == 'reclamacoes') {
+            $errMsg = "
+    			    <div class='form-group'>
+						<div class='col-md-6 offset-md-3'>
+							<h5 class='text-danger text-center'> Reclamação Excluída com Sucesso </h5>
+						</div>
+					</div>";
+        } elseif ($_GET['i'] == 'denuncias') {
+            $errMsg = "
+    			    <div class='form-group'>
+						<div class='col-md-6 offset-md-3'>
+							<h5 class='text-danger text-center'> Denúncia Excluida com Sucesso </h5>
+						</div>
+					</div>";
+        }
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,11 +55,12 @@ require 'config.php';
 
 if ($_GET['i'] == 'elogios') {
     echo "<h1 class='text-center text-dark'>Elogios Cadastrados no Site</h1><br />";
+    
+    if ($errMsg) {
+        echo $errMsg;
+    }
 
-if ($_GET['action'] == 'deletado') {
-    echo "<h5 class='text-danger text-center'>Elogio Apagado com Sucesso</h5> <br>";
-}
-    echo   "<div class='row d-flex mb-5'>";
+    echo   "<br><div class='row d-flex mb-5'>";
     $y = $connect->query("SELECT `cod_elogio`, `titulo`, `apelido`, `elo_cod_usuario` FROM `elogio`, `usuario` WHERE elogio.elo_cod_usuario = usuario.cod_usuario ;");
     while ($linhaelo = $y->fetch(PDO::FETCH_ASSOC)) {
         echo "
@@ -52,14 +86,13 @@ if ($linhaelo['elo_cod_usuario'] == $_SESSION['id']) {
             ";
     } 
 }elseif ($_GET['i'] == 'sugestoes') {
-    echo "
-        <h1 class='text-center text-dark'>Sugestões Cadastradas no Site</h1> <br>";
-
-if ($_GET['action'] == 'deletado') {
-    echo "<h5 class='text-danger text-center'>Sugestão Apagada com Sucesso</h5> <br>";
-}
-
-    echo "<div class='row d-flex justfy-content-center mb-5'>";
+    echo "<h1 class='text-center text-dark'>Sugestões Cadastradas no Site</h1> <br>";
+    
+    if($errMsg) {
+        echo $errMsg;
+    }
+    
+    echo "<br><div class='row d-flex mb-5'>";
     $y = $connect->query("SELECT `cod_sugestao`, `titulo`, `apelido`, `sug_cod_usuario` FROM `sugestao`, `usuario` WHERE sugestao.sug_cod_usuario = usuario.cod_usuario ;");
     while ($linhasug = $y->fetch(PDO::FETCH_ASSOC)) {
         echo "
@@ -88,11 +121,11 @@ if ($linhasug['sug_cod_usuario'] == $_SESSION['id']) {
     echo "
         <h1 class='text-center text-dark'>Reclamações Cadastradas no Site</h1> <br>";
 
-if ($_GET['action'] == 'deletado') {
-    echo "<h5 class='text-danger text-center'>Reclamação Apagada com Sucesso</h5> <br>";
-}
+    if ($errMsg) {
+        echo $errMsg;
+    }
 
-    echo "<div class='row d-flex justfy-content-center mb-5'>";
+    echo "<br><div class='row d-flex mb-5'>";
     $y = $connect->query("SELECT `cod_reclamacao`, `titulo`, `apelido`, `rec_cod_usuario` FROM `reclamacao`, `usuario` WHERE reclamacao.rec_cod_usuario = usuario.cod_usuario ;");
     while ($linharec = $y->fetch(PDO::FETCH_ASSOC)) {
         echo "
@@ -120,11 +153,11 @@ echo "               </li>
     echo "
         <h1 class='text-center text-dark'>Denúncias Cadastradas no Site</h1> <br>";
 
-if ($_GET['action'] == 'deletado') {
-    echo "<h5 class='text-danger text-center'>Denúncia Apagada com Sucesso</h5> <br>";
-}
+    if ($errMsg) {
+        echo $errMsg;
+    }
 
-    echo "<div class='row d-flex justfy-content-center mb-5'>";
+    echo "<br><div class='row d-flex mb-5'>";
     $y = $connect->query("SELECT `cod_denuncia`, `titulo`, `apelido`, `den_cod_usuario` FROM `denuncia`, `usuario` WHERE denuncia.den_cod_usuario = usuario.cod_usuario ;");
     while ($linhaden = $y->fetch(PDO::FETCH_ASSOC)) {
         echo "
@@ -165,4 +198,3 @@ echo "              </li>
 <?php include 'rodape.php'; ?>     
 </body>
 </html>
-

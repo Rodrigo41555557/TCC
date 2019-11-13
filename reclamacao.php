@@ -34,9 +34,13 @@ if (!isset($_SESSION['id'])){
             }
     }
 
-    if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
-        $errMsg = 'Reclamação enviada com sucesso';
-    }
+if(isset($_GET['action']) && $_GET['action'] == 'enviou') {
+    $errMsg = "<div class='form-group'>
+                              <div class='col-md-6 offset-md-3'>
+									<h5 class='text-danger text-center'> Reclamação Enviada com Sucesso
+							  </h5>
+					</div>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +66,11 @@ if (!isset($_SESSION['id'])){
             <h3 class="text-center"> Mande sua Reclamação </h3>
         </div>
     </div>
-
+        <?php
+        if($errMsg) {
+            echo $errMsg;
+        }
+        ?>
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Assunto/Título </label>  

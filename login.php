@@ -15,20 +15,13 @@
         }elseif($senha == '') {
             $errMsg = 'Escreva a senha';
         }
-        if($_POST['action'] == "entrou"){
-            $errMsg = "
-                    
-                        <div class='col-md-6 offset-md-3'>
-                            <h5 class='text-danger text-center'> Usuario ".$novo." Cadastrado com Sucesso </h5>
-                        </div>
-                    </div>";
-        }
+
 		if($errMsg == '') {
 			try {
 				$stmt = $connect->prepare('SELECT cod_usuario, nome_completo, apelido, senha, telefone FROM usuario WHERE apelido = :apelido');
 				$stmt->execute(array(
 					':apelido' => $apelido
-					));
+                ));
 				$data = $stmt->fetch(PDO::FETCH_ASSOC);
 
 				if($data == false){
@@ -37,7 +30,7 @@
                               <div class='col-md-6 offset-md-3'>
 									<h5 class='text-danger text-center'> Usuário '$apelido' não existe!
 							  </h5>
-							  </div>";
+						  </div>";
 				}
 				else {
                     if ($senha == $data['senha']) {
@@ -66,6 +59,14 @@
 			}
 		}
 	}
+
+    if(isset($_GET['action']) && $_GET['action'] == "entrou"){
+    $errMsg = "
+                        <div class='col-md-6 offset-md-3'>
+                            <h5 class='text-danger text-center'> Usuario ".$novo." Cadastrado com Sucesso </h5>
+                        </div>
+                    </div>";
+}
 
 ?>
 

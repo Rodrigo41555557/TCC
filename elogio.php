@@ -35,8 +35,12 @@
                 }
         }
 
-    if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
-        $errMsg = 'Elogio enviado com sucesso';
+    if(isset($_GET['action']) && $_GET['action'] == 'enviou') {
+        $errMsg = "<div class='form-group'>
+                              <div class='col-md-6 offset-md-3'>
+									<h5 class='text-danger text-center'> Elogio Enviado com Sucesso
+							  </h5>
+					</div>";
     }
 ?>
 <!DOCTYPE html>
