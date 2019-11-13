@@ -1,36 +1,39 @@
 <?php 
     require 'config.php';
 
-    if(isset($_POST['elogio'])) {
-        $errMsg = '';
-
-        // Get data from FROM
-        $texto_elogio = $_POST['texto_elogio'];
-        $titulo = $_POST['titulo'];
-        $userelogio = $_SESSION['id'];
-        //provisorio
-        $nome = $_POST['cod_usuario'];
-    
-			if($texto_elogio == '')
-				$errMsg = 'Escreva seu elogio';
-			if($titulo == '')
-				$errMsg = 'Escreva o título do seu elogio';
-			if($errMsg == ''){
-				try {
-					$stmt = $connect->prepare('INSERT INTO elogio (texto_elogio, titulo, elo_cod_usuario) VALUES (:texto_elogio, :titulo, :elo_cod_usuario)');
-					$stmt->execute(array(
-						':texto_elogio' => $texto_elogio,
-						':titulo' => $titulo,
-						':elo_cod_usuario' => $userelogio
-					));
-					header('Location: elogio.php?action=enviou');
-					exit;
-				}
-				catch(PDOException $e) {
-					echo $e->getMessage();
-				}
-			}
+    if (!isset($_SESSION['id'])){
+        header('Location: login.php');
     }
+        if(isset($_POST['elogio'])) {
+            $errMsg = '';
+
+            // Get data from FROM
+            $texto_elogio = $_POST['texto_elogio'];
+            $titulo = $_POST['titulo'];
+            $userelogio = $_SESSION['id'];
+            //provisorio
+            $nome = $_POST['cod_usuario'];
+
+                if($texto_elogio == '')
+                    $errMsg = 'Escreva seu elogio';
+                if($titulo == '')
+                    $errMsg = 'Escreva o título do seu elogio';
+                if($errMsg == ''){
+                    try {
+                        $stmt = $connect->prepare('INSERT INTO elogio (texto_elogio, titulo, elo_cod_usuario) VALUES (:texto_elogio, :titulo, :elo_cod_usuario)');
+                        $stmt->execute(array(
+                            ':texto_elogio' => $texto_elogio,
+                            ':titulo' => $titulo,
+                            ':elo_cod_usuario' => $userelogio
+                        ));
+                        header('Location: elogio.php?action=enviou');
+                        exit;
+                    }
+                    catch(PDOException $e) {
+                        echo $e->getMessage();
+                    }
+                }
+        }
 
     if(isset($_GET['action']) && $_GET['action'] == 'entrou') {
         $errMsg = 'Elogio enviado com sucesso';

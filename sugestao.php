@@ -1,6 +1,8 @@
 <?php 
     require 'config.php';
-
+if (!isset($_SESSION['id'])){
+    header('Location: login.php');
+}
     if(isset($_POST['sugestao'])) {
         $errMsg = '';
 

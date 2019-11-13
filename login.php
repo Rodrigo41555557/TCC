@@ -89,7 +89,9 @@
 	    </div>
     </div>
     <?php
-    echo $errMsg;
+    if($errMsg) {
+        echo $errMsg;
+    }
     ?>
 
         <div class="form-group">
