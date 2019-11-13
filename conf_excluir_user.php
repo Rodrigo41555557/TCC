@@ -16,7 +16,6 @@ if(empty($_SESSION['id'])){
 	  		$stmt = $connect->prepare('DELETE FROM usuario WHERE cod_usuario = :id');
 	  		$stmt->bindParam(':id', $id); 
 			$stmt->execute();
-			$_POST['del'] = 'Usuário apagado com sucesso';
 			session_destroy();
 	  		header('Location: login.php?action=deletado');  
 		} catch(PDOException $e) {

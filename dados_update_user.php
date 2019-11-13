@@ -21,13 +21,18 @@ require 'config.php';
            	echo $errMsg;
            	header('Location: editar_user.php?action=senhaincorreta'); 
            	die();
-        }elseif (!is_numeric($telefone)) {
-        	echo "escreva um numero de telefone válido";
+        }elseif (!is_numeric($telefone) && isset($telefone)) {
+        	$errMsg = "<div class='form-group'>
+                              <div class='col-md-6 offset-md-3'>
+									<h5 class='text-danger text-center'> Escreva um Numero de Telefone Válido
+							  </h5>
+						</div>";
         	echo '<meta http-equiv="refresh" content="3;url=editar_user.php">';
         	die();
         }
 
         //altera em tempo real
+
         $_SESSION['apelido'] = $_POST['apelido'];
         $_SESSION['name'] = $_POST['nome_completo'];
         $_SESSION['senha'] = $_POST['senha'];

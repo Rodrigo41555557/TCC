@@ -60,14 +60,20 @@
 		}
 	}
 
-    if(isset($_GET['action']) && $_GET['action'] == "entrou"){
+if(isset($_GET['action']) && $_GET['action'] == "entrou"){
     $errMsg = "
                         <div class='col-md-6 offset-md-3'>
                             <h5 class='text-danger text-center'> Usuario ".$novo." Cadastrado com Sucesso </h5>
                         </div>
                     </div>";
 }
-
+if(isset($_GET['action']) && $_GET['action'] == "deletado"){
+    $errMsg = "
+                        <div class='col-md-6 offset-md-3'>
+                            <h5 class='text-danger text-center'> Usuario ".$novo." Excluído com Sucesso </h5>
+                        </div>
+                    </div>";
+}
 ?>
 
 <!DOCTYPE html>

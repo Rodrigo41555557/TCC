@@ -1,5 +1,13 @@
 <?php
     require 'config.php';
+
+if(isset($_GET['action']) && $_GET['action'] == "alterado"){
+    $errMsg = "
+                       
+                            <h5 class='text-danger text-center'> Usuario Alterado com Sucesso</h5>
+ 
+                    </div>";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,12 +24,18 @@
 
 <br><br><br>
 
-<div class="container">    
-
-	<br><br><br>
-
+<div class="container">
     <div id="showuser" class="row">
-
+        <br>
+        <?php
+        if($errMsg) {
+            echo $errMsg;
+        }
+        ?>
+        <br>
+    </div>
+<br><br>
+    <div id="showuser" class="row">
 
         <div class="col-sm-4 mb-5">
             <li class="list-group-item">Nome do Usuário: <?= $_SESSION['apelido'] ?></li>
@@ -53,6 +67,7 @@
 
 
 </div>
+<br><br>
 <?php include 'rodape.php'; ?>
 </body>
 </html>
