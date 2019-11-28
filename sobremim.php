@@ -1,10 +1,11 @@
 <?php
+error_reporting(0);
     require 'config.php';
-
+    $errMsg = '';
 if(isset($_GET['action']) && $_GET['action'] == "alterado"){
     $errMsg = "
                        
-                            <h5 class='text-danger text-center'> Usuario Alterado com Sucesso</h5>
+                            <h5 class='text-success text-center'> Usuario Alterado com Sucesso</h5>
  
                     </div>";
 }
@@ -24,17 +25,18 @@ if(isset($_GET['action']) && $_GET['action'] == "alterado"){
 
 <br><br><br>
 
+<?php if($errMsg) { ?>
 <div class="container">
     <div id="showuser" class="row">
         <br>
-        <?php
-        if($errMsg) {
-            echo $errMsg;
-        }
-        ?>
+        <?php    echo $errMsg; ?>
+        
+ 
         <br>
     </div>
+<?php } ?>
 <br><br>
+<div class="container">
     <div id="showuser" class="row">
 
         <div class="col-sm-4 mb-5">

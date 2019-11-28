@@ -1,9 +1,10 @@
 <?php
+error_reporting(0);
 	require 'config.php';
 	// session_start();
-
+    $errMsg = '';
 	if(isset($_POST['login'])) {
-		$errMsg = '';
+		
 
 		// Get data from FORM
 		$apelido = $_POST['apelido'];
@@ -63,7 +64,7 @@
 if(isset($_GET['action']) && $_GET['action'] == "entrou"){
     $errMsg = "
                         <div class='col-md-6 offset-md-3'>
-                            <h5 class='text-danger text-center'> Usuario ".$novo." Cadastrado com Sucesso </h5>
+                            <h5 class='text-success text-center'> Usuario ".$novo." Cadastrado com Sucesso </h5>
                         </div>
                     </div>";
 }

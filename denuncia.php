@@ -1,5 +1,7 @@
 <?php 
+error_reporting(0);
     require 'config.php';
+    $errMsg = '';
 if (!isset($_SESSION['id'])){
     header('Location: login.php');
 }
@@ -35,11 +37,12 @@ if (!isset($_SESSION['id'])){
     }
 
 if(isset($_GET['action']) && $_GET['action'] == 'enviou') {
-    $errMsg = "<div class='form-group'>
-                              <div class='col-md-6 offset-md-3'>
-									<h5 class='text-danger text-center'> Denúncia Enviada com Sucesso
-							  </h5>
-					</div>";
+    $errMsg = "
+    <div class='form-group'>
+        <div class='col-md-6 offset-md-3'>
+            <h5 class='text-success text-center'> Denúncia Enviada com Sucesso </h5>
+        </div>
+    </div>";
 }
 ?>
 <!DOCTYPE html>
@@ -84,7 +87,6 @@ if(isset($_GET['action']) && $_GET['action'] == 'enviou') {
                 <label> Escreva sua Denuncia </label>  
                 <div>
                 <textarea type="textarea" class="form-control" name="texto_denuncia" rows="10" cols="70" placeholder="Escreva sua Denúncia" required=""></textarea>
-                </input>
             </div>
         </div> 
         <br>

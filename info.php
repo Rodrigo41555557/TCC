@@ -1,6 +1,7 @@
 <?php
+error_reporting(0);
 require 'config.php';
-
+$errMsg = '';
     if (isset($_GET['action']) && $_GET['action'] == 'deletado') {
         if ($_GET['i'] == 'elogios') {
             $errMsg = "

@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 require 'config.php';
 
 ?>
@@ -39,7 +40,7 @@ require 'config.php';
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label > Apelido </label>
-                <input type="text" name="apelido" class="form-control" placeholder="<?= $_SESSION['apelido'] ?>" required="" >
+                <input type="text" name="apelido" class="form-control" placeholder="<?= $_SESSION['apelido'] ?>">
             </div>
         </div>
 
@@ -47,14 +48,14 @@ require 'config.php';
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Nome Completo </label>  
-                <input type="text" name="nome_completo" class="form-control" placeholder="<?= $_SESSION['name'] ?>" required="" >
+                <input type="text" name="nome_completo" class="form-control" placeholder="<?= $_SESSION['name'] ?>">
             </div>
         </div>
 
         <div class="form-group">
             <div class="col-md-6 offset-md-3">
                 <label> Número de Telefone </label>  
-                <input type="tel" name="telefone" class="form-control" placeholder="<?= $_SESSION['telefone'] ?>" required="" >
+                <input type="tel" name="telefone" class="form-control" placeholder="<?= $_SESSION['telefone'] ?>">
             </div>
         </div>
 

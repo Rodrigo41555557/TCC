@@ -1,6 +1,7 @@
 <?php
+error_reporting(0);
 require 'config.php';
-
+$errMsg = '';
 if(isset($_POST['register'])) {
     $errMsg = '';
 

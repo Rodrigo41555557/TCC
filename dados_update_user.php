@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 require 'config.php';
 
 	if(empty($_SESSION['id'])){
@@ -15,6 +16,18 @@ require 'config.php';
         $senha = $_POST['senha'];
         $confSenha = $_POST['confsenha'];
         $telefone = $_POST['telefone'];
+
+		if (!isset($_POST['apelido'])) {
+			$apelido = $_SESSION['apelido'];
+		}elseif (!isset($_POST['nome_completo'])){
+			$nome = $_SESSION['name'];			
+		}elseif (!isset($_POST['senha'])){
+			$senha = $_SESSION['senha'];
+		}elseif (!isset($_POST['confsenha'])){
+			$confsenha = $_SESSION['confSenha'];
+		}elseif (!isset($_POST['telefone'])){
+			$telefone = $_SESSION['telefone'];
+		}
 
         if($senha != $confSenha){
             $errMsg = "Senha Incorreta";
@@ -33,11 +46,13 @@ require 'config.php';
 
         //altera em tempo real
 
-        $_SESSION['apelido'] = $_POST['apelido'];
-        $_SESSION['name'] = $_POST['nome_completo'];
-        $_SESSION['senha'] = $_POST['senha'];
-        $_SESSION['confSenha'] = $_POST['confsenha'];
-        $_SESSION['telefone'] = $_POST['telefone'];
+        $_SESSION['apelido'] = $apelido;
+        $_SESSION['name'] = $nome;
+        $_SESSION['senha'] = $senha;
+        $_SESSION['confSenha'] = $confSenha;
+		$_SESSION['telefone'] = $telefone;
+		print_r($nome);
+
 
 
 		if($errMsg == '') {
@@ -50,7 +65,7 @@ require 'config.php';
                 ':telefone' => $telefone,
                 ':apelido' => $apelido
               	));
-        		$_POST['alter'] = 'Usuário alterado com sucesso';
+
               	header('Location: sobremim.php?action=alterado');
 			} catch (PDOException $e) {
                 $errMsg = $e->getMessage();

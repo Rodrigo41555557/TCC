@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 require 'config.php';
 
 ?>
@@ -52,10 +53,10 @@ require 'config.php';
 
             <div class="col-sm-2 mb-4">
                 <div  class="card">
-                    <a href="informacao.php"><img class="card-img elemento" src="img/informacao.jpg" height="150px" ></a>
+                    <a href="reclamacao.php"><img class="card-img elemento " src="img/reclamacao.jpg" height="150px" ></a>
                 </div>
                 <div class="titulo">
-                    Informações
+                    Reclamações
                 </div>
             </div>
 
@@ -67,20 +68,6 @@ require 'config.php';
                    <article class="bg-dark"></article>
             </div>
 
-            
-            <div class="col-sm-2 mb-4">
-                <div  class="card">
-                    <a href="reclamacao.php"><img class="card-img elemento " src="img/reclamacao.jpg" height="150px" ></a>
-                </div>
-                <div class="titulo">
-                    Reclamações
-                </div>
-            </div>
-
-            <div class="col-sm-2 mb-5">
-                   <article class="bg-dark"></article>
-            </div>
-
             <div class="col-sm-2 mb-4">
                 <div  class="card">
                     <a href="denuncia.php"><img class="card-img elemento" src="img/denuncia.jpg" height="150px" ></a>
@@ -89,6 +76,21 @@ require 'config.php';
                     Denúncias
                 </div>
             </div>
+
+            
+
+            <div class="col-sm-2 mb-5">
+                   <article class="bg-dark"></article>
+            </div>
+
+            <div class="col-sm-2 mb-4">
+                <div  class="card">
+                    <a href="informacao.php"><img class="card-img elemento" src="img/informacao.jpg" height="150px" ></a>
+                </div>
+                <div class="titulo">
+                    Informações
+                </div>
+            </div>            
         
             <div class="col-sm-2 mb-5">
                    <article class="bg-dark"></article>

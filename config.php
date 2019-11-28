@@ -1,11 +1,12 @@
 <?php
+error_reporting(0);
 	ob_start();
 	session_start();
 
 	// Definições da base de dados
 	define('dbhost', 'localhost');
-	define('dbuser', 'aluno');
-	define('dbpass', 'aluno');
+	define('dbuser', 'root');
+	define('dbpass', '');
 	define('dbname', 'bd_ouvidoria_3info2');
 
 	// Conectando a base de dados (MySQL)

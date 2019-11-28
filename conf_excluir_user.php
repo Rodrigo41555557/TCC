@@ -1,6 +1,7 @@
 <?php
+error_reporting(0);
 require 'config.php';
-
+$errMsg = '';
 if(empty($_SESSION['id'])){
 	header('Location: login.php');
 }else{

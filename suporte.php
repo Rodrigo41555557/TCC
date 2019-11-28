@@ -1,7 +1,6 @@
 <?php
+error_reporting(0);
     require 'config.php';
-
-    w
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +30,7 @@
 		<h4>Programador</h4>
 		<p>João Pedro de Aguiar da Conceição</p>	
 		<br>
-		<h4>Planejamento</h4>
+		<h4>Plano de Desenvolvimento, Diagramas</h4>
 		<p>Willian Kamke da Silva</p>
 		
 		

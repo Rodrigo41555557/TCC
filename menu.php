@@ -1,5 +1,5 @@
 
-<div class="bg-primary z-depth-5" id="cabecalho">	
+<div class="bg-primary z-depth-5 shadow p-3 mb-5" id="cabecalho">	
 
 	<nav class="navbar navbar-expand-lg navbar-primary bg-bg-primary" >
 		<a href="index.php"><img src="img/x.jpg" width="30" height="30" alt=""></a>
@@ -53,8 +53,7 @@
 
 			</div>
 		</nav>
-
-		<hr class="bg-light">
+		<hr class="bg-light ">
 		<div class="container bg-primary">
 			<h1 class="text-center  text-light">Ouvindo Você!</h1>
 		</div>
